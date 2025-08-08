@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goshen Digital Security</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
         * {
             margin: 0;
@@ -13,14 +13,26 @@
             box-sizing: border-box;
         }
 
-        
+        :root {
+            --primary-bg: #0A0A0B;
+            --secondary-bg: #111114;
+            --card-bg: #1A1A1F;
+            --accent-purple: #6366F1;
+            --accent-cyan: #06B6D4;
+            --accent-green: #10B981;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A1A1AA;
+            --text-muted: #71717A;
+            --border-color: #27272A;
+            --hover-bg: #18181B;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--primary-bg);
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
-            transition: all 0.3s ease;
         }
 
         .container {
@@ -29,47 +41,13 @@
             padding: 0 24px;
         }
 
-        /* Theme Toggle */
-        .theme-toggle {
-            position: relative;
-            width: 60px;
-            height: 30px;
-            background: var(--border-color);
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-            outline: none;
-        }
-
-        .theme-toggle::before {
-            content: '';
-            position: absolute;
-            top: 3px;
-            left: 3px;
-            width: 24px;
-            height: 24px;
-            background: var(--text-primary);
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px var(--shadow-color);
-        }
-
-        [data-theme="light"] .theme-toggle::before {
-            transform: translateX(30px);
-        }
-
-        .theme-toggle:hover {
-            background: var(--accent-primary);
-        }
-
         /* Header */
         header {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: var(--glass-bg);
+            background: rgba(10, 10, 11, 0.8);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-color);
             transition: all 0.3s ease;
@@ -85,7 +63,7 @@
         .logo {
             font-size: 24px;
             font-weight: 700;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -116,18 +94,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-primary);
+            background: var(--accent-purple);
             transition: width 0.3s ease;
         }
 
         .nav-links a:hover::after {
             width: 100%;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
         }
 
         /* Hero Section */
@@ -136,7 +108,7 @@
             display: flex;
             align-items: center;
             position: relative;
-            background: radial-gradient(ellipse at center, rgba(0, 208, 132, 0.1) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
         }
 
         .hero-content {
@@ -147,12 +119,12 @@
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            background: rgba(0, 208, 132, 0.1);
-            border: 1px solid rgba(0, 208, 132, 0.2);
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
             padding: 8px 16px;
             border-radius: 50px;
             font-size: 14px;
-            color: var(--accent-primary);
+            color: var(--accent-purple);
             margin-bottom: 32px;
             font-weight: 500;
         }
@@ -162,7 +134,7 @@
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 24px;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--text-secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -182,7 +154,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
             color: white;
             padding: 16px 32px;
             border: none;
@@ -194,12 +166,11 @@
             gap: 8px;
             transition: all 0.3s ease;
             font-size: 16px;
-            cursor: pointer;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 20px 40px rgba(0, 208, 132, 0.3);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
         }
 
         .btn-secondary {
@@ -219,7 +190,7 @@
 
         .btn-secondary:hover {
             background: var(--hover-bg);
-            border-color: var(--accent-primary);
+            border-color: var(--accent-purple);
         }
 
         /* Grid background animation */
@@ -231,8 +202,8 @@
             height: 100%;
             opacity: 0.1;
             background-image: 
-                linear-gradient(var(--accent-primary) 1px, transparent 1px),
-                linear-gradient(90deg, var(--accent-primary) 1px, transparent 1px);
+                linear-gradient(rgba(99, 102, 241, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.3) 1px, transparent 1px);
             background-size: 50px 50px;
             animation: gridMove 20s linear infinite;
         }
@@ -256,20 +227,19 @@
         .section-badge {
             display: inline-block;
             background: rgba(16, 185, 129, 0.1);
-            color: var(--accent-success);
+            color: var(--accent-green);
             padding: 6px 16px;
             border-radius: 50px;
             font-size: 14px;
             font-weight: 600;
             margin-bottom: 16px;
-            border: 1px solid rgba(16, 185, 129, 0.2);
         }
 
         .section-title {
             font-size: clamp(36px, 5vw, 56px);
             font-weight: 700;
             margin-bottom: 16px;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--text-secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -305,15 +275,14 @@
             left: 0;
             width: 100%;
             height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+            background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
 
         .service-card:hover {
-            border-color: rgba(0, 208, 132, 0.3);
+            border-color: rgba(99, 102, 241, 0.3);
             transform: translateY(-4px);
-            box-shadow: 0 20px 40px var(--shadow-color);
         }
 
         .service-card:hover::before {
@@ -323,14 +292,13 @@
         .service-icon {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
             margin-bottom: 24px;
-            color: white;
         }
 
         .service-card h3 {
@@ -362,7 +330,7 @@
             content: '→';
             position: absolute;
             left: 0;
-            color: var(--accent-success);
+            color: var(--accent-green);
             font-weight: bold;
         }
 
@@ -380,8 +348,8 @@
         }
 
         .tool-card {
-            background: linear-gradient(135deg, rgba(0, 208, 132, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
-            border: 1px solid rgba(0, 208, 132, 0.2);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
             border-radius: 16px;
             padding: 32px;
             text-align: center;
@@ -415,28 +383,25 @@
 
         .tool-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(0, 208, 132, 0.4);
-            box-shadow: 0 20px 40px var(--shadow-color);
+            border-color: rgba(99, 102, 241, 0.4);
         }
 
         .tool-icon {
             width: 64px;
             height: 64px;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 32px;
             margin: 0 auto 24px;
-            color: white;
         }
 
         .tool-card h3 {
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 12px;
-            color: var(--text-primary);
         }
 
         .tool-card p {
@@ -445,10 +410,10 @@
         }
 
         .tool-btn {
-            background: rgba(0, 208, 132, 0.1);
-            color: var(--accent-primary);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
             padding: 12px 24px;
-            border: 1px solid rgba(0, 208, 132, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 8px;
             text-decoration: none;
             font-weight: 500;
@@ -457,8 +422,8 @@
         }
 
         .tool-btn:hover {
-            background: rgba(0, 208, 132, 0.2);
-            border-color: var(--accent-primary);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--accent-purple);
         }
 
         /* Stats Section */
@@ -481,7 +446,7 @@
         .stat-number {
             font-size: 48px;
             font-weight: 700;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -528,7 +493,7 @@
         .contact-icon {
             width: 20px;
             height: 20px;
-            color: var(--accent-primary);
+            color: var(--accent-purple);
         }
 
         /* Footer */
@@ -597,84 +562,7 @@
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-primary);
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 32px 0;
-            min-height: 80px;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            opacity: 0;
-            transform: translateX(-50px);
-            animation: logoSlideIn 1.5s ease-out 0.5s forwards;
-        }
-
-        .logo-ascii {
-            font-family: 'Courier New', monospace;
-            font-size: 24px;
-            color: var(--accent-primary);
-            line-height: 1.2;
-            white-space: pre;
-            text-shadow: 0 0 15px rgba(0, 208, 132, 0.4);
-            transform: scale(0);
-            animation: logoGrow 1s ease-out 0.8s forwards;
-        }
-
-        .logo-text {
-            font-size: 28px;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: logoTextSlideUp 1s ease-out 1.3s forwards;
-        }
-
-        @keyframes logoSlideIn {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes logoGrow {
-            0% {
-                transform: scale(0) rotate(-10deg);
-            }
-            60% {
-                transform: scale(1.1) rotate(2deg);
-            }
-            100% {
-                transform: scale(1) rotate(0deg);
-            }
-        }
-
-        @keyframes logoTextSlideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            background: var(--accent-purple);
         }
     </style>
 </head>
@@ -688,9 +576,6 @@
                 <li><a href="#tools">Assessment</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="nav-right">
-                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
-            </div>
         </nav>
     </header>
 
@@ -702,7 +587,7 @@
                     🛡️ Enterprise Cybersecurity Solutions
                 </div>
                 <h1>Defend Your Digital Assets</h1>
-                <p class="hero-subtitle">Advanced threat protection and security training for modern enterprises. Secure your business with confidence through comprehensive cybersecurity solutions.</p>
+                <p class="hero-subtitle">Advanced threat protection and security training for modern enterprises. Secure your business with confidence.</p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn-primary">
                         Get Free Assessment
@@ -913,19 +798,6 @@
     </footer>
 
     <script>
-        // Theme toggle functionality
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        }
-
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -967,10 +839,10 @@
             const scrollY = window.scrollY;
             
             if (scrollY > 100) {
-                header.style.background = 'var(--glass-bg)';
+                header.style.background = 'rgba(10, 10, 11, 0.95)';
                 header.style.backdropFilter = 'blur(20px)';
             } else {
-                header.style.background = 'var(--glass-bg)';
+                header.style.background = 'rgba(10, 10, 11, 0.8)';
                 header.style.backdropFilter = 'blur(20px)';
             }
             
@@ -994,52 +866,34 @@
             }
         });
 
+        // Dynamic typing effect for hero title
+        const heroTitle = document.querySelector('.hero h1');
+        const titleText = heroTitle.textContent;
+        heroTitle.textContent = '';
+        
+        let i = 0;
+        const typeWriter = () => {
+            if (i < titleText.length) {
+                heroTitle.textContent += titleText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        };
+        
+        // Start typing effect after page load
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 500);
+        });
+
         // Add hover effects to service cards
         document.querySelectorAll('.service-card').forEach(card => {
             card.addEventListener('mouseenter', () => {
-                card.style.boxShadow = '0 20px 40px var(--shadow-color)';
+                card.style.boxShadow = '0 20px 40px rgba(99, 102, 241, 0.1)';
             });
             
             card.addEventListener('mouseleave', () => {
                 card.style.boxShadow = 'none';
             });
-        });
-
-        // Add floating animation to tool cards
-        document.querySelectorAll('.tool-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.2}s`;
-        });
-
-        // Typing effect for stats
-        function animateNumber(element, target) {
-            let current = 0;
-            const increment = target / 100;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                element.textContent = Math.floor(current) + (target >= 100 ? '+' : target.toString().includes('.') ? '%' : '');
-            }, 20);
-        }
-
-        // Animate stats when they come into view
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const number = entry.target.querySelector('.stat-number');
-                    const text = number.textContent;
-                    const value = parseFloat(text.replace(/[^\d.]/g, ''));
-                    number.textContent = '0';
-                    animateNumber(number, value);
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        });
-
-        document.querySelectorAll('.stat-item').forEach(item => {
-            statsObserver.observe(item);
         });
     </script>
 </body>

@@ -1,0 +1,11 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header, footer {
+  background: var(--glass-bg);
+  border-bottom: 1px solid var(--border-color);
+  /* shared layout style */
+}
