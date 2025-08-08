@@ -1,34 +1,44 @@
 :root {
-            /* Dark theme */
-            --primary-bg: #0A0A0B;
-            --secondary-bg: #111114;
-            --card-bg: #1A1A1F;
-            --accent-primary: #00D084;
-            --accent-secondary: #7C3AED;
-            --accent-tertiary: #F59E0B;
-            --accent-success: #10B981;
-            --text-primary: #FFFFFF;
-            --text-secondary: #A1A1AA;
-            --text-muted: #71717A;
-            --border-color: #27272A;
-            --hover-bg: #18181B;
-            --glass-bg: rgba(10, 10, 11, 0.8);
-            --shadow-color: rgba(0, 0, 0, 0.3);
-        }
+    /* Dark theme */
+    --primary-bg: #0A0A0B;
+    --secondary-bg: #111114;
+    --card-bg: #1A1A1F;
+    --accent-primary: #00D084;
+    --accent-secondary: #7C3AED;
+    --accent-tertiary: #F59E0B;
+    --accent-success: #10B981;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A1A1AA;
+    --text-muted: #71717A;
+    --border-color: #27272A;
+    --hover-bg: #18181B;
+    --glass-bg: rgba(10, 10, 11, 0.8);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
 
-        [data-theme="light"] {
-            --primary-bg: #FAFAFA;
-            --secondary-bg: #FFFFFF;
-            --card-bg: #FFFFFF;
-            --accent-primary: #059669;
-            --accent-secondary: #7C3AED;
-            --accent-tertiary: #D97706;
-            --accent-success: #10B981;
-            --text-primary: #1A1A1A;
-            --text-secondary: #666666;
-            --text-muted: #999999;
-            --border-color: #E5E5E5;
-            --hover-bg: #F5F5F5;
-            --glass-bg: rgba(255, 255, 255, 0.9);
-            --shadow-color: rgba(0, 0, 0, 0.1);
-        }
+[data-theme="light"] {
+    --primary-bg: #FAFAFA;
+    --secondary-bg: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --accent-primary: #059669;
+    --accent-secondary: #7C3AED;
+    --accent-tertiary: #D97706;
+    --accent-success: #10B981;
+    --text-primary: #1A1A1A;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --border-color: #E5E5E5;
+    --hover-bg: #F5F5F5;
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+
+ .logo {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
