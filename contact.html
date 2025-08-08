@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Goshen Digital Security</title>
+    <meta name="description" content="Get in touch with our cybersecurity experts. Free consultations, security assessments, and professional support available.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-top: 60px;
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .contact-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--primary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: inherit;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(0, 208, 132, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px var(--shadow-color);
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 16px;
+            color: white;
+        }
+
+        .info-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .info-card a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+
+        .info-card a:hover {
+            text-decoration: underline;
+        }
+
+        .office-hours {
+            background: linear-gradient(135deg, rgba(0, 208, 132, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            border: 1px solid rgba(0, 208, 132, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .office-hours h3 {
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .office-hours .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .emergency-contact {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 127, 0.1) 100%);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .emergency-contact h3 {
+            color: #ef4444;
+            margin-bottom: 12px;
+        }
+
+        .emergency-contact p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .emergency-contact a {
+            color: #ef4444;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form,
+            .info-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Goshen Digital Security</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-content">
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge">CONTACT US</div>
+                    <h1 class="section-title">Get Expert Cybersecurity Help</h1>
+                    <p class="section-subtitle">Ready to secure your digital future? Our cybersecurity experts are here to help you protect what matters most.</p>
+                </div>
+
+                <div class="contact-container">
+                    <div class="contact-grid">
+                        <div class="fade-in">
+                            <form class="contact-form" id="contact-form">
+                                <h3 style="margin-bottom: 24px; color: var(--text-primary);">Send us a Message</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="company">Company/Organization</label>
+                                    <input type="text" id="company" name="company">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="service">Service Interest</label>
+                                    <select id="service" name="service">
+                                        <option value="">Select a service...</option>
+                                        <option value="assessment">Free Security Assessment</option>
+                                        <option value="training">Security Training & Awareness</option>
+                                        <option value="infrastructure">Infrastructure Security</option>
+                                        <option value="consulting">Strategic Consulting</option>
+                                        <option value="incident-response">Incident Response</option>
+                                        <option value="monitoring">Security Monitoring</option>
+                                        <option value="other">Other/General Inquiry</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" placeholder="Tell us about your security needs, challenges, or questions..." required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                        <input type="checkbox" required style="width: auto;">
+                                        <span style="font-size: 14px;">I agree to receive communications from Goshen Digital Security regarding my inquiry.</span>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn-primary" style="width: 100%;">
+                                    Send Message
+                                    <span>→</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="contact-info-section fade-in">
+                            <div class="info-card">
+                                <div class="info-icon">📧</div>
+                                <h3>Email Us</h3>
+                                <p>Get in touch for inquiries, support, or consultation requests.</p>
+                                <a href="mailto:info@goshendigitalsecurity.com">info@goshendigitalsecurity.com</a>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="info-icon">📞</div>
+                                <h3>Call Us</h3>
+                                <p>Speak directly with our cybersecurity experts.</p>
+                                <a href="tel:+15551235327">(555) 123-SECURE</a>
+                            </div>
+
+                            <div class="office-hours">
+                                <h3>Business Hours</h3>
+                                <div class="hours-list">
+                                    <div class="hours-item">
+                                        <span>Monday - Friday</span>
+                                        <span>8:00 AM - 6:00 PM EST</span>
+                                    </div>
+                                    <div class="hours-item">
+                                        <span>Saturday</span>
+                                        <span>9:00 AM - 2:00 PM EST</span>
+                                    </div>
+                                    <div class="hours-item">
+                                        <span>Sunday</span>
+                                        <span>Emergency Support Only</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="emergency-contact">
+                                <h3>🚨 Security Emergency?</h3>
+                                <p>For active security incidents or urgent threats requiring immediate attention.</p>
+                                <a href="tel:+15551239999">(555) 123-9999</a>
+                                <p style="margin-top: 8px; font-size: 12px;">24/7 Emergency Response Team</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Why Partner With Us?</h2>
+                    <p class="section-subtitle">Join hundreds of organizations who trust us to protect their digital assets.</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item fade-in">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Hour Response Time</div>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="services-grid" style="max-width: 800px; margin: 0 auto;">
+                    <div class="service-card fade-in">
+                        <h3>How quickly can you respond to security incidents?</h3>
+                        <p>We offer 24/7 emergency response for active security incidents. Our team typically responds within 1 hour for critical threats and within 24 hours for general inquiries.</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <h3>Do you work with small businesses?</h3>
+                        <p>Absolutely! We provide scalable security solutions for organizations of all sizes, from small startups to large enterprises. Our services are tailored to your specific needs and budget.</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <h3>What makes your security assessments different?</h3>
+                        <p>Our assessments go beyond automated scans. We provide comprehensive manual testing, strategic recommendations, and practical implementation guidance tailored to your business context.</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <h3>Can you help with compliance requirements?</h3>
+                        <p>Yes, we specialize in helping organizations meet various compliance standards including GDPR, HIPAA, SOC 2, PCI DSS, and industry-specific regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Goshen Digital Security. Advanced cybersecurity solutions for the modern enterprise.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

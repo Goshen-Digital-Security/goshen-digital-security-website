@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Assessment - Goshen Digital Security</title>
+    <meta name="description" content="Free security assessment tools to evaluate your cybersecurity posture and get personalized recommendations.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Goshen Digital Security</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="assessment.html" class="active">Assessment</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="section hero-alt">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge">FREE ASSESSMENT</div>
+                    <h1 class="section-title">Know Your Security Posture</h1>
+                    <p class="section-subtitle">Interactive tools to evaluate your cybersecurity practices and get personalized recommendations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="assessment-tabs">
+                    <button class="tab-button active" data-tab="personal">Personal Security</button>
+                    <button class="tab-button" data-tab="business">Business Security</button>
+                    <button class="tab-button" data-tab="social">Social Media</button>
+                </div>
+
+                <div id="personal" class="assessment-content active">
+                    <div class="assessment-intro fade-in">
+                        <h2>Personal Security Assessment</h2>
+                        <p>Evaluate your individual cybersecurity practices and get a personalized security score with actionable recommendations.</p>
+                    </div>
+
+                    <form class="assessment-form fade-in" id="personal-assessment">
+                        <div class="question-group">
+                            <h3>Password Security</h3>
+                            <div class="question">
+                                <label>Do you use a password manager for all your accounts?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="password_manager" value="always"> Yes, always</label>
+                                    <label><input type="radio" name="password_manager" value="sometimes"> Sometimes</label>
+                                    <label><input type="radio" name="password_manager" value="never"> No</label>
+                                </div>
+                            </div>
+                            <div class="question">
+                                <label>How often do you reuse passwords across multiple accounts?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="password_reuse" value="never"> Never</label>
+                                    <label><input type="radio" name="password_reuse" value="rarely"> Rarely</label>
+                                    <label><input type="radio" name="password_reuse" value="often"> Often</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Two-Factor Authentication</h3>
+                            <div class="question">
+                                <label>Do you have two-factor authentication enabled on your important accounts?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="two_factor" value="all"> All important accounts</label>
+                                    <label><input type="radio" name="two_factor" value="some"> Some accounts</label>
+                                    <label><input type="radio" name="two_factor" value="none"> No accounts</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Email & Communication</h3>
+                            <div class="question">
+                                <label>How do you handle suspicious emails or messages?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="suspicious_emails" value="careful"> I'm very cautious and verify before clicking</label>
+                                    <label><input type="radio" name="suspicious_emails" value="sometimes"> I'm usually careful but sometimes click</label>
+                                    <label><input type="radio" name="suspicious_emails" value="click"> I often click links in emails</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Device Security</h3>
+                            <div class="question">
+                                <label>Are your devices (phone, computer, tablet) protected with strong passwords or biometrics?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="device_security" value="strong"> Yes, strong protection on all devices</label>
+                                    <label><input type="radio" name="device_security" value="some"> Some devices are protected</label>
+                                    <label><input type="radio" name="device_security" value="weak"> Weak or no protection</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Software Updates</h3>
+                            <div class="question">
+                                <label>How regularly do you update your software and operating systems?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="updates" value="automatic"> Automatic updates enabled</label>
+                                    <label><input type="radio" name="updates" value="regular"> I update regularly when prompted</label>
+                                    <label><input type="radio" name="updates" value="delayed"> I often delay or skip updates</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary assessment-submit">
+                            Get My Security Score
+                            <span>→</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="business" class="assessment-content">
+                    <div class="assessment-intro fade-in">
+                        <h2>Business Security Assessment</h2>
+                        <p>Evaluate your organization's cybersecurity posture and identify key areas for improvement.</p>
+                    </div>
+
+                    <form class="assessment-form fade-in" id="business-assessment">
+                        <div class="question-group">
+                            <h3>Organization Size</h3>
+                            <div class="question">
+                                <label>How many employees does your organization have?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="org_size" value="solo"> Just me (solopreneur)</label>
+                                    <label><input type="radio" name="org_size" value="small"> 2-10 employees</label>
+                                    <label><input type="radio" name="org_size" value="medium"> 11-50 employees</label>
+                                    <label><input type="radio" name="org_size" value="large"> 50+ employees</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Security Policies</h3>
+                            <div class="question">
+                                <label>Do you have formal cybersecurity policies in place?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="policies" value="comprehensive"> Comprehensive written policies</label>
+                                    <label><input type="radio" name="policies" value="basic"> Basic guidelines</label>
+                                    <label><input type="radio" name="policies" value="none"> No formal policies</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Data Backup</h3>
+                            <div class="question">
+                                <label>How often do you backup your critical business data?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="backup" value="daily"> Daily automated backups</label>
+                                    <label><input type="radio" name="backup" value="weekly"> Weekly backups</label>
+                                    <label><input type="radio" name="backup" value="irregular"> Irregular or manual backups</label>
+                                    <label><input type="radio" name="backup" value="none"> No regular backups</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Employee Training</h3>
+                            <div class="question">
+                                <label>Do your team members receive cybersecurity training?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="training" value="regular"> Regular formal training</label>
+                                    <label><input type="radio" name="training" value="occasional"> Occasional informal guidance</label>
+                                    <label><input type="radio" name="training" value="none"> No security training</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Incident Response</h3>
+                            <div class="question">
+                                <label>Do you have a plan for responding to security incidents?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="incident_response" value="detailed"> Detailed written response plan</label>
+                                    <label><input type="radio" name="incident_response" value="basic"> Basic understanding of steps</label>
+                                    <label><input type="radio" name="incident_response" value="none"> No incident response plan</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary assessment-submit">
+                            Get Business Security Report
+                            <span>→</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="social" class="assessment-content">
+                    <div class="assessment-intro fade-in">
+                        <h2>Social Media Security Assessment</h2>
+                        <p>Evaluate the security of your social media presence and brand protection measures.</p>
+                    </div>
+
+                    <form class="assessment-form fade-in" id="social-assessment">
+                        <div class="question-group">
+                            <h3>Account Security</h3>
+                            <div class="question">
+                                <label>Do you have two-factor authentication enabled on all your social media accounts?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="social_2fa" value="all"> All accounts</label>
+                                    <label><input type="radio" name="social_2fa" value="most"> Most important accounts</label>
+                                    <label><input type="radio" name="social_2fa" value="few"> Only a few accounts</label>
+                                    <label><input type="radio" name="social_2fa" value="none"> None</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Privacy Settings</h3>
+                            <div class="question">
+                                <label>How often do you review and update your privacy settings?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="privacy_review" value="monthly"> Monthly</label>
+                                    <label><input type="radio" name="privacy_review" value="quarterly"> Every few months</label>
+                                    <label><input type="radio" name="privacy_review" value="rarely"> Rarely</label>
+                                    <label><input type="radio" name="privacy_review" value="never"> Never</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Content Sharing</h3>
+                            <div class="question">
+                                <label>How careful are you about sharing personal or business information on social media?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="content_sharing" value="very_careful"> Very careful, minimal personal info</label>
+                                    <label><input type="radio" name="content_sharing" value="careful"> Generally careful</label>
+                                    <label><input type="radio" name="content_sharing" value="casual"> Share casually</label>
+                                    <label><input type="radio" name="content_sharing" value="open"> Share openly</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Brand Monitoring</h3>
+                            <div class="question">
+                                <label>Do you monitor for fake accounts or impersonation of your brand?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="brand_monitoring" value="active"> Active monitoring with alerts</label>
+                                    <label><input type="radio" name="brand_monitoring" value="occasional"> Occasional checking</label>
+                                    <label><input type="radio" name="brand_monitoring" value="none"> No monitoring</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary assessment-submit">
+                            Get Social Media Security Score
+                            <span>→</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="assessment-results" class="assessment-results" style="display: none;"></div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="contact-card fade-in">
+                    <h2>Want a Professional Security Assessment?</h2>
+                    <p>Get a comprehensive security evaluation with detailed recommendations and implementation support.</p>
+                    <a href="contact.html" class="btn-primary">
+                        Schedule Professional Assessment
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Goshen Digital Security. Cybersecurity for the underserved. Protection for those who can't afford to lose.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

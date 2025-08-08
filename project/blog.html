@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Goshen Digital Security</title>
+    <meta name="description" content="Cybersecurity insights, tips, and best practices for small businesses, nonprofits, and solopreneurs.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Goshen Digital Security</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="section hero-alt">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge">BLOG</div>
+                    <h1 class="section-title">Security Insights & Best Practices</h1>
+                    <p class="section-subtitle">Practical cybersecurity guidance for small teams, nonprofits, and solopreneurs.</p>
+                </div>
+                
+                <div class="blog-admin fade-in">
+                    <button id="new-post-btn" class="btn-secondary">
+                        Write New Post
+                        <span>+</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="blog-categories fade-in">
+                    <button class="category-filter active" data-category="all">All Posts</button>
+                    <button class="category-filter" data-category="security-tips">Security Tips</button>
+                    <button class="category-filter" data-category="threat-intelligence">Threat Intelligence</button>
+                    <button class="category-filter" data-category="case-studies">Case Studies</button>
+                    <button class="category-filter" data-category="industry-news">Industry News</button>
+                </div>
+
+                <div id="blog-posts" class="blog-posts">
+                    <!-- Blog posts will be loaded here -->
+                </div>
+
+                <div class="blog-pagination">
+                    <button id="load-more" class="btn-secondary">Load More Posts</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Post Modal -->
+        <div id="new-post-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Write New Blog Post</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <form id="new-post-form">
+                    <div class="form-group">
+                        <label for="post-title">Post Title</label>
+                        <input type="text" id="post-title" name="title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="post-category">Category</label>
+                        <select id="post-category" name="category" required>
+                            <option value="security-tips">Security Tips</option>
+                            <option value="threat-intelligence">Threat Intelligence</option>
+                            <option value="case-studies">Case Studies</option>
+                            <option value="industry-news">Industry News</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="post-excerpt">Excerpt</label>
+                        <textarea id="post-excerpt" name="excerpt" rows="3" placeholder="Brief description of the post..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="post-content">Content</label>
+                        <textarea id="post-content" name="content" rows="15" placeholder="Write your blog post content here..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="post-tags">Tags (comma-separated)</label>
+                        <input type="text" id="post-tags" name="tags" placeholder="cybersecurity, tips, security">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="save-draft">Save Draft</button>
+                        <button type="submit" class="btn-primary">Publish Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- View Post Modal -->
+        <div id="view-post-modal" class="modal">
+            <div class="modal-content modal-large">
+                <div class="modal-header">
+                    <button class="modal-close">&times;</button>
+                </div>
+                <article id="full-post-content" class="blog-post-full">
+                    <!-- Full post content will be loaded here -->
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Goshen Digital Security. Cybersecurity for the underserved. Protection for those who can't afford to lose.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+</html>

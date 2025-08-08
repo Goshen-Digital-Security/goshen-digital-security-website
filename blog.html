@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Goshen Digital Security</title>
+    <meta name="description" content="Stay informed with the latest cybersecurity insights, threat analysis, and security best practices from Goshen Digital Security's expert team.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Goshen Digital Security</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-content">
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge">CYBERSECURITY INSIGHTS</div>
+                    <h1 class="section-title">Security Intelligence Hub</h1>
+                    <p class="section-subtitle">Expert insights, threat analysis, and practical cybersecurity guidance to keep your organization secure in an evolving digital landscape.</p>
+                </div>
+
+                <!-- Blog Categories Filter -->
+                <div class="blog-filters fade-in">
+                    <button class="filter-btn active" data-category="all">All Posts</button>
+                    <button class="filter-btn" data-category="threat-analysis">Threat Analysis</button>
+                    <button class="filter-btn" data-category="best-practices">Best Practices</button>
+                    <button class="filter-btn" data-category="compliance">Compliance</button>
+                    <button class="filter-btn" data-category="incident-response">Incident Response</button>
+                    <button class="filter-btn" data-category="emerging-tech">Emerging Tech</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="featured-article fade-in">
+                    <div class="featured-badge">📌 FEATURED ARTICLE</div>
+                    <div class="featured-content">
+                        <div class="featured-meta">
+                            <span class="category-tag threat-analysis">Threat Analysis</span>
+                            <span class="read-time">8 min read</span>
+                            <span class="publish-date">December 15, 2024</span>
+                        </div>
+                        <h2>The Rise of AI-Powered Cyberattacks: What Organizations Need to Know</h2>
+                        <p>As artificial intelligence becomes more sophisticated, cybercriminals are leveraging these technologies to create more convincing social engineering attacks, automated vulnerability exploitation, and advanced persistent threats. Our comprehensive analysis reveals the emerging AI threat landscape and provides actionable defense strategies.</p>
+                        <div class="featured-footer">
+                            <div class="author-info">
+                                <div class="author-avatar">👩‍💻</div>
+                                <div class="author-details">
+                                    <span class="author-name">Sarah Rodriguez</span>
+                                    <span class="author-title">Lead Security Analyst</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn-primary">
+                                Read Full Article
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="blog-grid">
+                    <!-- Article 1 -->
+                    <article class="blog-card fade-in" data-category="best-practices">
+                        <div class="blog-image">
+                            <div class="blog-icon">🔐</div>
+                            <div class="blog-overlay">
+                                <span class="category-tag best-practices">Best Practices</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="read-time">5 min read</span>
+                                <span class="publish-date">December 12, 2024</span>
+                            </div>
+                            <h3>Zero Trust Architecture: A Complete Implementation Guide</h3>
+                            <p>Learn how to transition from traditional perimeter-based security to a comprehensive zero trust model that verifies every user and device.</p>
+                            <div class="blog-footer">
+                                <div class="author-simple">
+                                    <span class="author-avatar-small">👨‍💼</span>
+                                    <span class="author-name-small">Michael Chen</span>
+                                </div>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="blog-card fade-in" data-category="compliance">
+                        <div class="blog-image">
+                            <div class="blog-icon">📋</div>
+                            <div class="blog-overlay">
+                                <span class="category-tag compliance">Compliance</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="read-time">7 min read</span>
+                                <span class="publish-date">December 10, 2024</span>
+                            </div>
+                            <h3>SOC 2 Compliance in 2025: What's Changed and How to Prepare</h3>
+                            <p>Navigate the evolving SOC 2 landscape with updated requirements, new control objectives, and practical steps for maintaining compliance.</p>
+                            <div class="blog-footer">
+                                <div class="author-simple">
+                                    <span class="author-avatar-small">👩‍⚖️</span>
+                                    <span class="author-name-small">Lisa Thompson</span>
+                                </div>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="blog-card fade-in" data-category="incident-response">
+                        <div class="blog-image">
+                            <div class="blog-icon">🚨</div>
+                            <div class="blog-overlay">
+                                <span class="category-tag incident-response">Incident Response</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="read-time">6 min read</span>
+                                <span class="publish-date">December 8, 2024</span>
+                            </div>
+                            <h3>Building an Effective Incident Response Playbook</h3>
+                            <p>Create comprehensive incident response procedures that minimize damage and ensure rapid recovery from security breaches.</p>
+                            <div class="blog-footer">
+                                <div class="author-simple">
+                                    <span class="author-avatar-small">👩‍💻</span>
+                                    <span class="author-name-small">Sarah Rodriguez</span>
+                                </div>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="blog-card fade-in" data-category="emerging-tech">
+                        <div class="blog-image">
+                            <div class="blog-icon">🚀</div>
+                            <div class="blog-overlay">
+                                <span class="category-tag emerging-tech">Emerging Tech</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="read-time">9 min read</span>
+                                <span class="publish-date">December 5, 2024</span>
+                            </div>
+                            <h3>Quantum Computing and Cryptography: Preparing for the Post-Quantum Era</h3>
+                            <p>Understand how quantum computing will impact current encryption methods and what organizations can do to prepare now.</p>
+                            <div class="blog-footer">
+                                <div class="author-simple">
+                                    <span class="author-avatar-small">👩‍🚀</span>
+                                    <span class="author-name-small">Amy Patel</span>
+                                </div>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="blog-card fade-in" data-category="best-practices">
+                        <div class="blog-image">
+                            <div class="blog-icon">🎯</div>
+                            <div class="blog-overlay">
+                                <span class="category-tag best-practices">Best Practices</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="read-time">4 min read</span>
+                                <span class="publish-date">December 3, 2024</span>
+                            </div>
+                            <h3>Security Awareness Training That Actually Works</h3>
+                            <p>Move beyond traditional training methods with engaging, practical approaches that create lasting behavioral change.</p>
+                            <div class="blog-footer">
+                                <div class="author-simple">
+                                    <span class="author-avatar-small">👨‍🔬</span>
+                                    <span class="author-name-small">David Kim</span>
+                                </div>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="blog-card fade-in" data-category="threat-analysis">
+                        <div class="blog-image">
+                            <div class="blog-icon">⚡</div>
+                            <div class="blog-overlay">
+                                <span class="category-tag threat-analysis">Threat Analysis</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="read-time">10 min read</span>
+                                <span class="publish-date">November 30, 2024</span>
+                            </div>
+                            <h3>Cloud Security Misconfigurations: The Top 10 Risks and How to Avoid Them</h3>
+                            <p>Examine the most common cloud security mistakes that lead to breaches and learn practical prevention strategies.</p>
+                            <div class="blog-footer">
+                                <div class="author-simple">
+                                    <span class="author-avatar-small">👨‍🏭</span>
+                                    <span class="author-name-small">James Wilson</span>
+                                </div>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section fade-in">
+                    <button class="btn-secondary load-more-btn">
+                        Load More Articles
+                        <span>↓</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="newsletter-card fade-in">
+                    <div class="newsletter-content">
+                        <div class="newsletter-icon">📬</div>
+                        <h2>Stay Ahead of Cyber Threats</h2>
+                        <p>Get weekly cybersecurity insights, threat alerts, and practical security tips delivered directly to your inbox.</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Enter your email address" class="newsletter-input">
+                            <button class="btn-primary newsletter-btn">
+                                Subscribe
+                                <span>→</span>
+                            </button>
+                        </div>
+                        <p class="newsletter-disclaimer">Join 2,500+ security professionals. Unsubscribe anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Resources -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Popular Security Resources</h2>
+                    <p class="section-subtitle">Essential tools and guides for cybersecurity professionals</p>
+                </div>
+
+                <div class="resources-grid">
+                    <div class="resource-card fade-in">
+                        <div class="resource-icon">🛡️</div>
+                        <h3>Security Checklist Templates</h3>
+                        <p>Comprehensive checklists for security assessments, incident response, and compliance audits.</p>
+                        <a href="#" class="resource-link">Download Free Templates →</a>
+                    </div>
+
+                    <div class="resource-card fade-in">
+                        <div class="resource-icon">📊</div>
+                        <h3>Threat Intelligence Reports</h3>
+                        <p>Monthly reports covering the latest threat landscape, attack vectors, and defensive strategies.</p>
+                        <a href="#" class="resource-link">Access Reports →</a>
+                    </div>
+
+                    <div class="resource-card fade-in">
+                        <div class="resource-icon">🎓</div>
+                        <h3>Security Training Materials</h3>
+                        <p>Educational content and training resources for building security awareness in your organization.</p>
+                        <a href="#" class="resource-link">View Training Library →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="contact-card fade-in">
+                    <h2>Need Expert Security Guidance?</h2>
+                    <p>Our cybersecurity experts are ready to help you implement the strategies discussed in our articles. Get personalized advice for your organization's security challenges.</p>
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn-primary">
+                            Schedule a Consultation
+                            <span>→</span>
+                        </a>
+                        <a href="assessment.html" class="btn-secondary">
+                            Start Security Assessment
+                            <span>📋</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Goshen Digital Security. Advanced cybersecurity solutions for the modern enterprise.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>
