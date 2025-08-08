@@ -1,3 +1,64 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: logoSlideIn 1.5s ease-out 0.5s forwards;
+}
+
+.logo-ascii {
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    color: var(--accent-primary);
+    line-height: 1.2;
+    white-space: pre;
+    text-shadow: 0 0 15px rgba(0, 208, 132, 0.4);
+    transform: scale(0);
+    animation: logoGrow 1s ease-out 0.8s forwards;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: logoTextSlideUp 1s ease-out 1.3s forwards;
+}
+
+
+@keyframes logoSlideIn {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes logoGrow {
+        0% {
+            transform: scale(0) rotate(-10deg);
+        }
+        60% {
+            transform: scale(1.1) rotate(2deg);
+        }
+        100% {
+            transform: scale(1) rotate(0deg);
+        }
+    }
+
+    @keyframes logoTextSlideUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+
 
 .btn-primary {
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
