@@ -551,8 +551,7 @@ nav {
     color: white;
 }
 
-.tool-card h3 {
-    font-size: 20px;
+.tool-card h1 {
     font-weight: 600;
     margin-bottom: 12px;
     color: var(--text-primary);
@@ -561,6 +560,7 @@ nav {
 .tool-card p {
     color: var(--text-secondary);
     margin-bottom: 24px;
+    font-size: 20px;
 }
 
 .tool-btn {
@@ -605,6 +605,7 @@ nav {
     justify-content: center;
     gap: 12px;
     color: var(--text-secondary);
+    font-size: 25px;
 }
 
 .contact-icon {
