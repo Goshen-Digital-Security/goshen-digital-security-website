@@ -111,10 +111,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 700;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     -webkit-background-clip: text;
@@ -132,6 +133,7 @@ nav {
 .nav-links a {
     color: var(--text-secondary);
     text-decoration: none;
+    font-size: 24px;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -202,7 +204,7 @@ nav {
     border: 1px solid rgba(0, 208, 132, 0.2);
     padding: 8px 16px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 25px;
     color: var(--accent-primary);
     margin-bottom: 32px;
     font-weight: 500;
@@ -220,7 +222,7 @@ nav {
 }
 
 .hero-subtitle {
-    font-size: 20px;
+    font-size: 25px;
     color: var(--text-secondary);
     margin-bottom: 40px;
     font-weight: 400;
@@ -244,7 +246,7 @@ nav {
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -265,7 +267,7 @@ nav {
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -314,7 +316,7 @@ nav {
     color: var(--accent-success);
     padding: 6px 16px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 25px;
     font-weight: 600;
     margin-bottom: 16px;
     border: 1px solid rgba(16, 185, 129, 0.2);
@@ -331,7 +333,7 @@ nav {
 }
 
 .section-subtitle {
-    font-size: 20px;
+    font-size: 25px;
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
@@ -342,7 +344,7 @@ nav {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    font-size: 18px;
+    font-size: 25px;
     line-height: 1.8;
 }
 
@@ -363,7 +365,7 @@ nav {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    font-size: 18px;
+    font-size: 25px;
     line-height: 1.8;
 }
 
@@ -424,8 +426,7 @@ nav {
     color: white;
 }
 
-.service-card h3 {
-    font-size: 24px;
+.service-card h1 {
     font-weight: 600;
     margin-bottom: 12px;
     color: var(--text-primary);
@@ -434,7 +435,7 @@ nav {
 .service-card p {
     color: var(--text-secondary);
     margin-bottom: 24px;
-    font-size: 16px;
+    font-size: 25px;
 }
 
 .service-features {
@@ -446,7 +447,7 @@ nav {
     margin-bottom: 8px;
     padding-left: 20px;
     position: relative;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .service-features li::before {
@@ -473,7 +474,7 @@ nav {
 }
 
 .stat-number {
-    font-size: 48px;
+    font-size: 55px;
     font-weight: 700;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     -webkit-background-clip: text;
@@ -485,7 +486,7 @@ nav {
 
 .stat-label {
     color: var(--text-secondary);
-    font-size: 16px;
+    font-size: 25px;
     font-weight: 500;
 }
 
@@ -568,6 +569,7 @@ nav {
     padding: 12px 24px;
     border: 1px solid rgba(0, 208, 132, 0.2);
     border-radius: 8px;
+    font-size: 20px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
