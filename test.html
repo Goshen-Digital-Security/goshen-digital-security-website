@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Navigation Bar</title>
+    <style>
+        :root {
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --accent-primary: #3b82f6;
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --nav-bg: rgba(15, 23, 42, 0.85);
+            --border-color: rgba(148, 163, 184, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            transition: transform 0.2s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            letter-spacing: -0.2px;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 16px;
+            right: 16px;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            border-radius: 1px;
+            transform: scaleX(0);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            transform: scaleX(1);
+        }
+
+        .nav-links a.active {
+            color: var(--text-primary);
+            background: rgba(59, 130, 246, 0.15);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .theme-toggle {
+            width: 44px;
+            height: 44px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent-primary);
+            background: rgba(59, 130, 246, 0.1);
+            transform: scale(1.05);
+        }
+
+        .theme-toggle::before {
+            content: '🌙';
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle:hover::before {
+            transform: rotate(15deg);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .mobile-menu-btn span {
+            width: 20px;
+            height: 2px;
+            background: var(--text-secondary);
+            transition: all 0.3s ease;
+            border-radius: 1px;
+        }
+
+        .mobile-menu-btn:hover span {
+            background: var(--text-primary);
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: calc(100% + 1px);
+                left: 0;
+                right: 0;
+                background: var(--nav-bg);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                gap: 8px;
+                padding: 24px;
+                border-bottom: 1px solid var(--border-color);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 12px 16px;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+        }
+
+        /* Demo content */
+        .content {
+            margin-top: 120px;
+            padding: 40px 24px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .content h1 {
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Goshen Digital Security</a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Modern Navigation Demo</h1>
+        <p>This navigation bar features a modern glass-morphism design with smooth animations and responsive mobile functionality. The hover effects you loved have been preserved and enhanced with subtle scale transforms and improved color transitions.</p>
+        <p>Key modern features include:</p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li>Glassmorphism backdrop blur effect</li>
+            <li>Gradient logo with hover scaling</li>
+            <li>Enhanced hover animations with lift effect</li>
+            <li>Responsive mobile hamburger menu</li>
+            <li>Modern button styling with subtle borders</li>
+            <li>Improved typography and spacing</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            // Theme toggle functionality can be added here
+            console.log('Theme toggle clicked');
+        }
+
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navLinks = document.getElementById('navLinks');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!navLinks.contains(e.target) && !mobileBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
