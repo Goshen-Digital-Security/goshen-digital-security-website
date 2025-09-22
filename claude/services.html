@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Goshen Digital Security</title>
+    <meta name="description" content="Comprehensive cybersecurity services for small businesses, nonprofits, and solopreneurs. Training, assessments, and protection.">
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Goshen Digital Security</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="section hero-alt">
+            <div class="grid-bg"></div>
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge services-glow">Services</div>
+                    <h1 class="section-title">Comprehensive <span class="highlight-text">Security Solutions</span></h1>
+                    <p class="section-subtitle hover-highlight">Enterprise-grade protection designed specifically for <span class="accent-hover">small teams</span>, <span class="accent-hover">nonprofits</span>, and <span class="accent-hover">solopreneurs</span>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk Assessment - Always Visible -->
+        <section class="section">
+            <div class="container">
+                <div class="service-detailed fade-in risk-assessment-highlight">
+                    <div class="service-header">
+                        <div class="service-icon-large">🔍</div>
+                        <div>
+                            <h2 class="interactive-heading">Security Risk Assessment</h2>
+                            <p class="service-tagline danger-text">Know Your Vulnerabilities Before Attackers Do</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-description">
+                        <p class="hover-lift">Deep-dive analysis of your security posture with strategic recommendations and implementation roadmaps tailored to your specific needs and constraints. <span class="accent-hover">Everything mentioned below</span> but on a <span class="warning-text">focused assessment level</span>.</p>
+
+                        <div class="service-offerings">
+                            <h3 class="accent-hover">Assessment Components:</h3>
+                            <div class="offerings-grid">
+                                <div class="offering-item enhanced-card-hover">
+                                    <h4>Vulnerability Scanning</h4>
+                                    <p>Comprehensive technical security analysis across all systems</p>
+                                </div>
+                                <div class="offering-item enhanced-card-hover">
+                                    <h4>Threat Landscape Analysis</h4>
+                                    <p>Industry-specific threat intelligence and risk modeling</p>
+                                </div>
+                                <div class="offering-item enhanced-card-hover">
+                                    <h4>Security Architecture Review</h4>
+                                    <p>Custom security frameworks evaluation for your organization</p>
+                                </div>
+                                <div class="offering-item enhanced-card-hover">
+                                    <h4>Risk Prioritization Matrix</h4>
+                                    <p>Actionable roadmap with clear priorities and timelines</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Categories with Collapsible Sections -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge tools-glow">Service Categories</div>
+                    <h2 class="section-title">Comprehensive <span class="accent-hover">Protection Suite</span></h2>
+                    <p class="section-subtitle hover-highlight">Click any category to explore our specialized services</p>
+                </div>
+
+                <div class="service-categories">
+                    <!-- Digital Safeguards & Protection -->
+                    <div class="category-section fade-in">
+                        <div class="category-header" onclick="toggleCategory('safeguards')">
+                            <div class="category-icon">🛡️</div>
+                            <div class="category-info">
+                                <h3 class="category-title">Digital Safeguards & Protection</h3>
+                                <p class="category-subtitle">Secure your digital identity and online presence</p>
+                            </div>
+                            <div class="category-toggle">
+                                <span class="toggle-icon">+</span>
+                            </div>
+                        </div>
+                        <div class="category-content" id="safeguards">
+                            <div class="services-grid">
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">🔐</div>
+                                    <h4>Account & Identity Security</h4>
+                                    <p>Comprehensive protection for all your online accounts and personal identity</p>
+                                </div>
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">📱</div>
+                                    <h4>Social Media Security</h4>
+                                    <p>Protect your social presence, audience, and digital reputation</p>
+                                </div>
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">👁️</div>
+                                    <h4>Digital Footprint Review</h4>
+                                    <p>Analyze and minimize your digital exposure across the internet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Risk, Response, & Recovery -->
+                    <div class="category-section fade-in">
+                        <div class="category-header" onclick="toggleCategory('response')">
+                            <div class="category-icon">🚨</div>
+                            <div class="category-info">
+                                <h3 class="category-title">Risk, Response, & Recovery</h3>
+                                <p class="category-subtitle">Prepare for and respond to security incidents</p>
+                            </div>
+                            <div class="category-toggle">
+                                <span class="toggle-icon">+</span>
+                            </div>
+                        </div>
+                        <div class="category-content" id="response">
+                            <div class="services-grid">
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">🔍</div>
+                                    <h4>Incident Investigation</h4>
+                                    <p>Thorough analysis and forensics when security breaches occur</p>
+                                </div>
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">📧</div>
+                                    <h4>Email Risk Analysis</h4>
+                                    <p>Comprehensive email security assessment and threat mitigation</p>
+                                </div>
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">📶</div>
+                                    <h4>Wi-Fi Security</h4>
+                                    <p>Secure your wireless networks and prevent unauthorized access</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consulting & Planning -->
+                    <div class="category-section fade-in">
+                        <div class="category-header" onclick="toggleCategory('consulting')">
+                            <div class="category-icon">📋</div>
+                            <div class="category-info">
+                                <h3 class="category-title">Consulting & Planning</h3>
+                                <p class="category-subtitle">Strategic security planning and vulnerability management</p>
+                            </div>
+                            <div class="category-toggle">
+                                <span class="toggle-icon">+</span>
+                            </div>
+                        </div>
+                        <div class="category-content" id="consulting">
+                            <div class="services-grid">
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">🔧</div>
+                                    <h4>Vulnerability Remediation</h4>
+                                    <p>Fix security weaknesses before they become entry points</p>
+                                </div>
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">📝</div>
+                                    <h4>Incident Response Plan</h4>
+                                    <p>Prepare comprehensive response strategies for security incidents</p>
+                                </div>
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">📊</div>
+                                    <h4>Asset Inventory</h4>
+                                    <p>Complete catalog and assessment of your digital assets</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Training & Awareness -->
+                    <div class="category-section fade-in">
+                        <div class="category-header" onclick="toggleCategory('training')">
+                            <div class="category-icon">🎓</div>
+                            <div class="category-info">
+                                <h3 class="category-title">Training & Awareness</h3>
+                                <p class="category-subtitle">Educate your team on cybersecurity best practices</p>
+                            </div>
+                            <div class="category-toggle">
+                                <span class="toggle-icon">+</span>
+                            </div>
+                        </div>
+                        <div class="category-content" id="training">
+                            <div class="services-grid">
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">🎯</div>
+                                    <h4>Phishing & Awareness Training</h4>
+                                    <p>Real-world simulation and education to prevent social engineering</p>
+                                </div>
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">🤖</div>
+                                    <h4>Privacy, Security, & AI Tools Workshop</h4>
+                                    <p>Modern security challenges in the age of AI and automation</p>
+                                </div>
+                                <div class="service-item enhanced-card-hover">
+                                    <div class="service-icon">⚙️</div>
+                                    <h4>Privacy, Security, & AI Tooling Integration</h4>
+                                    <p>Implement and integrate security tools into your workflow</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge cta-glow">Service Packages</div>
+                    <h2 class="section-title">Tailored <span class="highlight-text">Security Solutions</span></h2>
+                    <p class="section-subtitle hover-highlight">Choose the package that fits your organization's <span class="accent-hover">security needs</span> and <span class="accent-hover">budget</span></p>
+                </div>
+
+                <div class="packages-grid">
+                    <!-- Foundation Package -->
+                    <div class="package-card fade-in foundation-package">
+                        <div class="package-header">
+                            <div class="package-icon">🏗️</div>
+                            <h3>Foundation</h3>
+                            <p class="package-tagline">Know Where You Stand</p>
+                        </div>
+                        <div class="package-description">
+                            <p>Establish your security baseline with comprehensive assessment and foundational protections.</p>
+                        </div>
+                        <ul class="package-features">
+                            <li class="feature-hover">Risk Assessment</li>
+                            <li class="feature-hover">Digital Footprint Review</li>
+                            <li class="feature-hover">Account & Identity Security</li>
+                            <li class="feature-hover">Asset Inventory</li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary hover-slide">Get Foundation</a>
+                    </div>
+
+                    <!-- Awareness & Culture Package -->
+                    <div class="package-card fade-in awareness-package">
+                        <div class="package-header">
+                            <div class="package-icon">👥</div>
+                            <h3>Awareness & Culture</h3>
+                            <p class="package-tagline">Secure Your Human Layer</p>
+                        </div>
+                        <div class="package-description">
+                            <p>Build a security-conscious culture with comprehensive training and awareness programs.</p>
+                        </div>
+                        <ul class="package-features">
+                            <li class="feature-hover">Phishing Training</li>
+                            <li class="feature-hover">Privacy, Security, & AI Tools Workshop</li>
+                            <li class="feature-hover">Social Media Security</li>
+                            <li class="feature-hover">Privacy, Security, & AI Tooling Integration</li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary hover-slide">Build Culture</a>
+                    </div>
+
+                    <!-- Resilience Package -->
+                    <div class="package-card fade-in resilience-package">
+                        <div class="package-header">
+                            <div class="package-icon">💪</div>
+                            <h3>Resilience</h3>
+                            <p class="package-tagline">Be Prepared for What's Next</p>
+                        </div>
+                        <div class="package-description">
+                            <p>Build organizational resilience with incident planning and proactive security measures.</p>
+                        </div>
+                        <ul class="package-features">
+                            <li class="feature-hover">Incident Response Plan</li>
+                            <li class="feature-hover">Vulnerability Remediation</li>
+                            <li class="feature-hover">Wi-Fi Security Upgrade</li>
+                            <li class="feature-hover">Email Risk Analysis</li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary hover-slide">Build Resilience</a>
+                    </div>
+
+                    <!-- Visibility Package -->
+                    <div class="package-card fade-in visibility-package">
+                        <div class="package-header">
+                            <div class="package-icon">👁️</div>
+                            <h3>Visibility</h3>
+                            <p class="package-tagline">Find Gaps Before Adversaries Do</p>
+                        </div>
+                        <div class="package-description">
+                            <p>Comprehensive visibility into your security posture with continuous monitoring and analysis.</p>
+                        </div>
+                        <ul class="package-features">
+                            <li class="feature-hover">Asset Inventory</li>
+                            <li class="feature-hover">Vulnerability Remediation Across Assets</li>
+                            <li class="feature-hover">Digital Footprint Analysis</li>
+                            <li class="feature-hover">Continuous Security Monitoring</li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary hover-slide">Gain Visibility</a>
+                    </div>
+
+                    <!-- Rapid Response Package -->
+                    <div class="package-card fade-in rapid-response-package">
+                        <div class="package-header">
+                            <div class="package-icon">🚨</div>
+                            <h3>Rapid Response</h3>
+                            <p class="package-tagline">When Disaster Strikes</p>
+                        </div>
+                        <div class="package-description">
+                            <p>Emergency incident response with immediate remediation and recovery guidance.</p>
+                        </div>
+                        <ul class="package-features">
+                            <li class="feature-hover">Incident Investigation with Immediate Remediation</li>
+                            <li class="feature-hover">Incident Response Plan</li>
+                            <li class="feature-hover">Follow-up Awareness Training</li>
+                            <li class="feature-hover">24/7 Emergency Support</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary pulse-button">Emergency Response</a>
+                    </div>
+
+                    <!-- 360° Package -->
+                    <div class="package-card fade-in featured-package">
+                        <div class="package-badge">Most Comprehensive</div>
+                        <div class="package-header">
+                            <div class="package-icon">🌟</div>
+                            <h3>360° Security</h3>
+                            <p class="package-tagline">Peace of Mind End to End</p>
+                        </div>
+                        <div class="package-description">
+                            <p>Complete security coverage combining all our specialized services for total protection.</p>
+                        </div>
+                        <ul class="package-features">
+                            <li class="feature-hover">Everything in <strong>Foundation</strong></li>
+                            <li class="feature-hover">Everything in <strong>Awareness & Culture</strong></li>
+                            <li class="feature-hover">Everything in <strong>Resilience</strong></li>
+                            <li class="feature-hover">Priority Support & Consultation</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary pulse-button">Go 360°</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="contact-card fade-in cta-card-enhanced">
+                    <h2 class="interactive-heading">Ready to Secure Your Organization?</h2>
+                    <p class="hover-lift">Start with a <span class="accent-hover">free consultation</span> to discuss your specific security needs and challenges.</p>
+                    <a href="contact.html" class="btn-primary pulse-button cta-main">
+                        Schedule Free Consultation
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Goshen Digital Security. <span class="accent-hover">Cybersecurity for the underserved</span>. <span class="accent-hover">Protection for those who can't afford to lose</span>.</p>
+        </div>
+    </footer>
+
+    <script src="services.js"></script>
+</body>
+</html>
