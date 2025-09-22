@@ -24,7 +24,8 @@
     --hover-bg: #18181B;
     --glass-bg: rgba(10, 10, 11, 0.8);
     --shadow-color: rgba(0, 0, 0, 0.3);
-    --subtext-font-size: 20px;
+    --subtext-font-size: 22px;
+    --subtitle-font-size: 22px;
 }
 
 [data-theme="light"] {
@@ -334,7 +335,7 @@ nav {
 }
 
 .section-subtitle {
-    font-size: 25px;
+    font-size: 22px;
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
