@@ -248,7 +248,7 @@ nav {
     color: var(--accent-success);
     padding: 4px 12px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 12px;
     border: 1px solid rgba(16, 185, 129, 0.2);
@@ -325,7 +325,7 @@ nav {
     background: linear-gradient(90deg, transparent, rgba(0, 208, 132, 0.1), transparent);
     border-radius: 4px;
     padding: 2px 4px;
-    margin: -2px -4px;
+    /* margin: -2px -4px; */
 }
 
 .hover-lift {
@@ -684,7 +684,8 @@ nav {
     transform: translateX(-50%);
     background: var(--accent-primary);
     color: white;
-    padding: 6px 16px;
+    padding: 6px 14px;
+    margin-top: 16px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
@@ -705,7 +706,7 @@ nav {
     justify-content: center;
     font-size: 28px;
     color: white;
-    margin: 0 auto 16px;
+    margin: 10px auto 16px;
     transition: all 0.3s ease;
 }
 
