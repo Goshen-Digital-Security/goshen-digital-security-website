@@ -31,6 +31,26 @@
     --section-spacing: 60px;
 }
 
+[data-theme="light"] {
+    --primary-bg: #FAFAFA;
+    --secondary-bg: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --accent-primary: #059669;
+    --accent-secondary: #7C3AED;
+    --accent-tertiary: #D97706;
+    --accent-success: #10B981;
+    --accent-danger: #EF4444;
+    --accent-warning: #F59E0B;
+    --text-primary: #1A1A1A;
+    --text-secondary: #000000;
+    --text-muted: #999999;
+    --border-color: #E5E5E5;
+    --hover-bg: #F5F5F5;
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--primary-bg);
@@ -139,34 +159,38 @@ nav {
 }
 
 .theme-toggle {
-    width: 44px;
-    height: 44px;
-    border: 2px solid var(--border-color);
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
-}
-
-.theme-toggle:hover {
-    border-color: var(--accent-primary);
-    background: rgba(0, 208, 132, 0.1);
-    transform: scale(1.05);
+    width: 60px;
+    height: 30px;
+    background: var(--border-color);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .theme-toggle::before {
-    content: '🌙';
-    font-size: 18px;
-    transition: transform 0.3s ease;
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background: var(--text-primary);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px var(--shadow-color);
 }
 
-.theme-toggle:hover::before {
-    transform: rotate(15deg);
+[data-theme="light"] .theme-toggle::before {
+    transform: translateX(30px);
+}
+
+.theme-toggle:hover {
+    background: var(--accent-primary);
 }
 
 /* Mobile Menu */
