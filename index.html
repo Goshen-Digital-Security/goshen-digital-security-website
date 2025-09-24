@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goshen Digital Security - Cybersecurity for the Underserved</title>
     <meta name="description" content="Cybersecurity for small teams, nonprofits, and solopreneurs. Enterprise-grade security made simple, affordable, and human-first.">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
@@ -14,13 +14,16 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="assessment.html">Assessment</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-right">
                 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
@@ -29,17 +32,17 @@
         <div class="grid-bg"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">
+                <div class="hero-badge glow-text">
                     Cybersecurity for the Underserved
                 </div>
-                <h1>Protection for Those Who Can't Afford to Lose</h1>
-                <p class="hero-subtitle">Small teams, nonprofits, and entrepreneurs deserve the same protection as the big guys. We make enterprise-grade security simple, affordable, and human-first.</p>
+                <h1 class="interactive-title">Protection for Those Who <span class="highlight-text">Can't Afford to Lose</span></h1>
+                <p class="hero-subtitle hover-lift">Small teams, nonprofits, and entrepreneurs deserve the same protection as the big guys. We make <span class="accent-hover">enterprise-grade security</span> simple, affordable, and <span class="accent-hover">human-first</span>.</p>
                 <div class="hero-cta">
-                    <a href="assessment.html" class="btn-primary">
-                        Start Free Risk Assessment
+                    <a href="contact.html" class="btn-primary pulse-button">
+                        Schedule a Free Consultation
                         <span>→</span>
                     </a>
-                    <a href="services.html" class="btn-secondary">
+                    <a href="services.html" class="btn-secondary hover-slide">
                         Explore Our Services
                         <span>↓</span>
                     </a>
@@ -51,26 +54,26 @@
     <section class="section problem-section">
         <div class="container">
             <div class="section-header fade-in">
-                <h2 class="section-title">Hackers Don't Care That You're Small</h2>
-                <p class="section-subtitle">Cyberattacks have surged over 300% in the past five years. Small businesses and nonprofits are now the #1 target — not because they're valuable, but because they're vulnerable.</p>
+                <h2 class="section-title danger-glow">Hackers Don't Care That You're <span class="highlight-text">Small</span></h2>
+                <p class="section-subtitle hover-highlight">Cyberattacks have surged over <span class="stat-highlight">300%</span> in the past five years. Small businesses and nonprofits are now the <span class="danger-text">#1 target</span> — not because they're valuable, but because they're <span class="accent-hover">vulnerable</span>.</p>
             </div>
 
             <div class="problem-content fade-in">
-                <p>If you think you're too small to be a target, you're exactly who attackers are looking for. And when you go down, the ripple effects can be devastating: loss of trust, income, and in some cases, total shutdown.</p>
-                <p>Nonprofits move millions. Solopreneurs build personal brands. SMBs fuel entire communities. <strong>You can't afford a breach.</strong></p>
+                <p class="hover-lift">If you think you're too small to be a target, <span class="warning-text">you're exactly who attackers are looking for</span>. And when you go down, the ripple effects can be devastating: loss of trust, income, and in some cases, total shutdown.</p>
+                <p class="hover-lift">Nonprofits move <span class="stat-highlight">millions</span>. Solopreneurs build <span class="accent-hover">personal brands</span>. SMBs fuel <span class="accent-hover">entire communities</span>. <strong class="danger-glow-text">You can't afford a breach.</strong></p>
             </div>
 
             <div class="threat-stats">
-                <div class="stat-item fade-in">
-                    <div class="stat-number" data-count="43">0</div>
+                <div class="stat-item fade-in stat-card-hover">
+                    <div class="stat-number danger-glow-text" data-count="43">0</div>
                     <div class="stat-label">% of cyberattacks target small businesses</div>
                 </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number" data-count="60">0</div>
+                <div class="stat-item fade-in stat-card-hover">
+                    <div class="stat-number warning-glow-text" data-count="60">0</div>
                     <div class="stat-label">% of small companies close within 6 months of a breach</div>
                 </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number" data-count="4.45">0</div>
+                <div class="stat-item fade-in stat-card-hover">
+                    <div class="stat-number accent-glow-text" data-count="4.45">0</div>
                     <div class="stat-label">Million average cost of a data breach</div>
                 </div>
             </div>
@@ -80,26 +83,26 @@
     <section class="section">
         <div class="container">
             <div class="section-header fade-in">
-                <div class="section-badge">By The Numbers</div>
-                <h2 class="section-title">Research-Backed Security</h2>
-                <p class="section-subtitle">Our approach is grounded in real data, extensive research, and hands-on experience.</p>
+                <div class="section-badge pulse-glow">By The Numbers</div>
+                <h2 class="section-title">Research-Backed <span class="accent-hover">Security</span></h2>
+                <p class="section-subtitle hover-highlight">Our approach is grounded in <span class="accent-hover">real data</span>, extensive research, and <span class="accent-hover">hands-on experience</span>.</p>
             </div>
 
             <div class="founder-stats">
-                <div class="stat-item fade-in">
-                    <div class="stat-number" data-count="47979">0</div>
+                <div class="stat-item fade-in research-card-hover">
+                    <div class="stat-number accent-glow-text" data-count="47979">0</div>
                     <div class="stat-label">Commits analyzed across vulnerabilities</div>
                 </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number" data-count="3945">0</div>
+                <div class="stat-item fade-in research-card-hover">
+                    <div class="stat-number secondary-glow-text" data-count="3945">0</div>
                     <div class="stat-label">Police bodycam videos processed for transparency research</div>
                 </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number" data-count="100000">0</div>
+                <div class="stat-item fade-in research-card-hover">
+                    <div class="stat-number tertiary-glow-text" data-count="100000">0</div>
                     <div class="stat-label">Network packets generated for covert channel detection</div>
                 </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number" data-count="13175">0</div>
+                <div class="stat-item fade-in research-card-hover">
+                    <div class="stat-number success-glow-text" data-count="13175">0</div>
                     <div class="stat-label">Vulnerabilities analyzed (NVD)</div>
                 </div>
             </div>
@@ -109,14 +112,14 @@
     <section class="section section-alt mission-section">
         <div class="container">
             <div class="section-header fade-in">
-                <div class="section-badge">Our Mission</div>
-                <h2 class="section-title">Cybersecurity Shouldn't Be a Luxury</h2>
-                <p class="section-subtitle">At Goshen Digital Security, we believe that in the age of AI and advanced technology, security is a human right, not a high-ticket add-on.</p>
+                <div class="section-badge mission-glow">Our Mission</div>
+                <h2 class="section-title">Cybersecurity Shouldn't Be a <span class="highlight-text">Luxury</span></h2>
+                <p class="section-subtitle hover-highlight">At Goshen Digital Security, we believe that in the age of AI and advanced technology, <span class="accent-hover">security is a human right</span>, not a high-ticket add-on.</p>
             </div>
 
             <div class="mission-content fade-in">
-                <p>Our mission is to democratize digital protection through practical tools, tailored assessments, and real-world education for the people who need it most — and can afford it least.</p>
-                <p>Whether you're a nonprofit managing donor data, a startup founder with no IT staff, or a solopreneur building a digital-first brand — we're here to keep you safe.</p>
+                <p class="hover-lift mission-text">Our mission is to <span class="accent-hover">democratize digital protection</span> through practical tools, tailored assessments, and real-world education for the people who need it most — and can afford it least.</p>
+                <p class="hover-lift mission-text">Whether you're a <span class="accent-hover">nonprofit managing donor data</span>, a <span class="accent-hover">startup founder with no IT staff</span>, or a <span class="accent-hover">solopreneur building a digital-first brand</span> — we're here to keep you safe.</p>
             </div>
         </div>
     </section>
@@ -124,112 +127,79 @@
     <section class="section services-preview">
         <div class="container">
             <div class="section-header fade-in">
-                <div class="section-badge">Services</div>
-                <h2 class="section-title">Comprehensive Security Solutions</h2>
-                <p class="section-subtitle">End-to-end cybersecurity services designed to protect, educate, and empower your organization.</p>
+                <div class="section-badge services-glow">Services</div>
+                <h2 class="section-title">Comprehensive <span class="accent-hover">Security Solutions</span></h2>
+                <p class="section-subtitle hover-highlight">End-to-end cybersecurity services designed to <span class="accent-hover">protect</span>, <span class="accent-hover">educate</span>, and <span class="accent-hover">empower</span> your organization.</p>
             </div>
 
             <div class="services-grid">
-                <div class="service-card fade-in">
+                <div class="service-card fade-in enhanced-card-hover">
                     <div class="service-icon">🎯</div>
-                    <h1>Security Training & Awareness</h1>
-                    <p>Prevention starts with education. Most breaches start with one click, one weak password, one missed red flag.</p>
+                    <h3 class="service-title interactive-heading">Security Training & Awareness</h3>
+                    <p class="service-description">Prevention starts with education. Most breaches start with <span class="danger-text">one click</span>, <span class="warning-text">one weak password</span>, <span class="danger-text">one missed red flag</span>.</p>
                     <ul class="service-features">
-                        <li>Non-technical, practical training</li>
-                        <li>Flexible delivery options</li>
-                        <li>Designed for busy professionals</li>
-                        <li>Real-world threat simulation</li>
+                        <li class="feature-hover">Non-technical, practical training</li>
+                        <li class="feature-hover">Flexible delivery options</li>
+                        <li class="feature-hover">Designed for busy professionals</li>
+                        <li class="feature-hover">Real-world threat simulation</li>
                     </ul>
                 </div>
                 
-                <div class="service-card fade-in">
+                <div class="service-card fade-in enhanced-card-hover">
                     <div class="service-icon">📱</div>
-                    <h1>Social Media Security</h1>
-                    <p>Your social accounts are a goldmine for attackers. Protect your digital identity and reputation.</p>
+                    <h3 class="service-title interactive-heading">Social Media Security</h3>
+                    <p class="service-description">Your social accounts are a <span class="warning-text">goldmine for attackers</span>. Protect your <span class="accent-hover">digital identity</span> and reputation.</p>
                     <ul class="service-features">
-                        <li>Platform-by-platform risk assessment</li>
-                        <li>Two-factor authentication hardening</li>
-                        <li>Impersonation & brand monitoring</li>
-                        <li>Emergency response plans</li>
+                        <li class="feature-hover">Platform-by-platform risk assessment</li>
+                        <li class="feature-hover">Two-factor authentication hardening</li>
+                        <li class="feature-hover">Impersonation & brand monitoring</li>
+                        <li class="feature-hover">Emergency response plans</li>
                     </ul>
                 </div>
 
-                <div class="service-card fade-in">
+                <div class="service-card fade-in enhanced-card-hover">
                     <div class="service-icon">👤</div>
-                    <h1>Solopreneur Protection</h1>
-                    <p>If you go down, everything goes with you. Secure your digital life like big corporations protect theirs.</p>
+                    <h3 class="service-title interactive-heading">Solopreneur Protection</h3>
+                    <p class="service-description">If you go down, <span class="danger-text">everything goes with you</span>. Secure your digital life like <span class="accent-hover">big corporations</span> protect theirs.</p>
                     <ul class="service-features">
-                        <li>Personal digital asset protection</li>
-                        <li>Business continuity planning</li>
-                        <li>Secure backup strategies</li>
-                        <li>Identity theft prevention</li>
+                        <li class="feature-hover">Personal digital asset protection</li>
+                        <li class="feature-hover">Business continuity planning</li>
+                        <li class="feature-hover">Secure backup strategies</li>
+                        <li class="feature-hover">Identity theft prevention</li>
                     </ul>
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 48px;">
-                <a href="services.html" class="btn-secondary">View All Services</a>
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="services.html" class="btn-secondary hover-slide">View All Services</a>
             </div>
         </div>
     </section>
 
     
 
-    <section class="section section-alt">
-        <div class="container">
-            <div class="section-header fade-in">
-                <div class="section-badge">Free Tools</div>
-                <h2 class="section-title">Security Assessment Platform</h2>
-                <p class="section-subtitle">Evaluate your current security posture with our interactive assessment tools and get personalized recommendations.</p>
-            </div>
-
-            <div class="tools-grid">
-                <div class="tool-card fade-in">
-                    <div class="tool-icon">🎯</div>
-                    <h1>Personal Security Audit</h1>
-                    <p>Interactive assessment evaluating individual cybersecurity practices with personalized improvement recommendations.</p>
-                    <a href="assessment.html" class="tool-btn">Start Assessment</a>
-                </div>
-
-                <div class="tool-card fade-in">
-                    <div class="tool-icon">🏢</div>
-                    <h1>Enterprise Security Review</h1>
-                    <p>Comprehensive organizational security evaluation with detailed reporting and strategic improvement roadmap.</p>
-                    <a href="assessment.html" class="tool-btn">Launch Review</a>
-                </div>
-
-                <div class="tool-card fade-in">
-                    <div class="tool-icon">💬</div>
-                    <h1>Expert Security Consultation</h1>
-                    <p>Complimentary strategic consultation to discuss your security challenges and explore tailored solutions.</p>
-                    <a href="contact.html" class="tool-btn">Schedule Call</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="section cta-section">
         <div class="container">
             <div class="section-header fade-in">
-                <div class="section-badge">Get Started</div>
-                <h2 class="section-title">Your Size Doesn't Determine Your Right to Be Secure</h2>
-                <p class="section-subtitle">Let's protect what you've worked so hard to build before it's too late.</p>
+                <div class="section-badge cta-glow">Get Started</div>
+                <h2 class="section-title">Your Size Doesn't Determine Your Right to Be <span class="highlight-text">Secure</span></h2>
+                <p class="section-subtitle hover-highlight">Let's protect what you've worked so hard to build <span class="danger-text">before it's too late</span>.</p>
             </div>
 
-            <div class="contact-card fade-in">
-                <a href="assessment.html" class="btn-primary">
-                    Get a Free Security Assessment
+            <div class="contact-card fade-in cta-card-enhanced">
+                <a href="contact.html" class="btn-primary pulse-button cta-main">
+                    Schedule a Free Consultation
                     <span>→</span>
                 </a>
 
                 <div class="contact-info">
-                    <div class="contact-item">
+                    <div class="contact-item hover-contact">
                         <span>info@goshendigitalsecurity.com</span>
                     </div>
-                    <div class="contact-item">
-                        <span>(555) 123-SECURE</span>
+                    <div class="contact-item hover-contact">
+                        <span>(720) 604-2455</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item hover-contact">
                         <span>Remote & On-site Services Available</span>
                     </div>
                 </div>
@@ -239,10 +209,10 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Goshen Digital Security. Cybersecurity for the underserved. Protection for those who can't afford to lose.</p>
+            <p>&copy; 2025 Goshen Digital Security. <span class="accent-hover">Cybersecurity for the underserved</span>. <span class="accent-hover">Protection for those who can't afford to lose</span>.</p>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

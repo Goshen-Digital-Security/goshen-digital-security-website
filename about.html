@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Goshen Digital Security</title>
-    <meta name="description" content="Learn about Jonathan Bateman, founder of Goshen Digital Security, and our mission to democratize cybersecurity.">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="Learn about our mission to democratize cybersecurity for small teams, nonprofits, and entrepreneurs. Protection for those who can't afford to lose.">
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
     <header>
@@ -14,155 +14,200 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="assessment.html">Assessment</a></li>
+                <!-- <li><a href="assessment.html">Assessment</a></li> -->
                 <li><a href="about.html" class="active">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <!-- <li><a href="blog.html">Blog</a></li> -->
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-right">
                 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
 
     <main class="page-content">
+        <section class="section hero-alt">
+            <div class="grid-bg"></div>
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge about-glow">Who We Are</div>
+                    <h1 class="section-title">Protection for Those Who <span class="highlight-text">Can't Afford to Lose</span></h1>
+                    <!-- <p class="section-subtitle hover-highlight">Democratizing cybersecurity through <span class="accent-hover">practical tools</span>, <span class="accent-hover">tailored assessments</span>, and <span class="accent-hover">real-world education</span>.</p> -->
+                    <p class="hover-highlight section-subtitle">Whether you're a <span class="accent-hover">nonprofit managing donor data</span>, a <span class="accent-hover">startup founder with no IT staff</span>, or a <span class="accent-hover">solopreneur building a digital-first brand</span> — we're here to keep you safe.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
         <section class="section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <div class="section-badge">OUR STORY</div>
-                    <h1 class="section-title">Built by a Student of Systems</h1>
-                    <p class="section-subtitle">Cybersecurity solutions that are accessible, transparent, and built for how the world actually works.</p>
-                </div>
-
-                <div class="about-content fade-in">
-                    <div class="founder-profile">
-                        <div class="founder-avatar">
-                            <span>JB</span>
+                <div class="about-content">
+                    <div class="mission-section fade-in">
+                        <div class="section-header">
+                            <div class="section-badge mission-glow">Our Mission</div>
+                            <h2 class="section-title interactive-heading">Democratize <span class="accent-hover">Cybersecurity</span></h2>
                         </div>
-                        <div class="founder-info">
-                            <h2>Jonathan Bateman</h2>
-                            <p class="founder-title">Founder, Secure Software Developer, Student of Systems</p>
+                        
+                        <div class="mission-text">
+                            <p class="mission-statement hover-lift">Democratize cybersecurity by delivering practical tools, tailored assessments, and real-world education to the <span class="accent-hover">entrepreneurs</span>, <span class="accent-hover">nonprofits</span>, and <span class="accent-hover">businesses</span> that need it most.</p>
+                            <!-- <p class="hover-lift">Security for all: empowering people and organizations to defend what matters.</p> -->
                         </div>
-                    </div>
-
-                    <div class="founder-story">
-                        <p>I'm Jonathan Bateman — a secure software developer, applied mathematician, and full-time student building a cybersecurity company from the intersection of technology, human systems, and trust.</p>
-
-                        <p>While many in the field lead with decades of experience, I lead with something different: <strong>diversity of perspective</strong>. I've reverse engineered vulnerabilities in open-source software, built AI pipelines for analyzing police body cam footage, contributed to cryptographic test suites, and worked across government, nonprofits, and research labs. I've also co-authored open-source tools and published applied work — all before graduating college.</p>
-
-                        <p><strong>Why start a company now?</strong> Because I'm not waiting for a permission slip to build what I believe is urgently needed: cybersecurity solutions that are accessible, transparent, and built for how the world actually works, not just how it looks on a network diagram.</p>
-
-                        <p>I'm currently completing a dual degree in Computing Security and Sociology/Anthropology at RIT, a CAE-CD designated program by the NSA, where I've also been awarded fellowships for multidisciplinary innovation.</p>
-                    </div>
-
-                    <div class="expertise-areas">
-                        <h3>My work spans:</h3>
-                        <div class="expertise-grid">
-                            <div class="expertise-item">
-                                <div class="expertise-icon">🔐</div>
-                                <h4>Cryptography & Security</h4>
-                                <p>Reverse engineering, secure systems, vulnerability analysis</p>
-                            </div>
-                            <div class="expertise-item">
-                                <div class="expertise-icon">🤖</div>
-                                <h4>Machine Learning & AI</h4>
-                                <p>Ethical AI, automated threat detection, data analysis</p>
-                            </div>
-                            <div class="expertise-item">
-                                <div class="expertise-icon">🗺️</div>
-                                <h4>Systems & Society</h4>
-                                <p>GIS, social analysis, open data, civic technology</p>
-                            </div>
-                            <div class="expertise-item">
-                                <div class="expertise-icon">🌐</div>
-                                <h4>Open Source & Research</h4>
-                                <p>Transparent technology, collaborative development</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="philosophy">
-                        <blockquote>
-                            <p>At heart, I'm a student — not just of cybersecurity, but of systems, power, and people. And that's what makes my approach different.</p>
-                            <p>This isn't just about locking things down. It's about building technology that earns trust.</p>
-                        </blockquote>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="section section-alt">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <div class="section-badge">CREDENTIALS</div>
-                    <h2 class="section-title">Research & Experience by the Numbers</h2>
-                    <p class="section-subtitle">Our approach is grounded in extensive research and real-world application.</p>
-                </div>
-
-                <div class="credentials-stats">
-                    <div class="stat-item fade-in">
-                        <div class="stat-number" data-count="47979">0</div>
-                        <div class="stat-label">commits analyzed across 13,175 vulnerabilities (NVD)</div>
-                    </div>
-                    <div class="stat-item fade-in">
-                        <div class="stat-number" data-count="3945">0</div>
-                        <div class="stat-label">police bodycam videos processed for research transparency</div>
-                    </div>
-                    <div class="stat-item fade-in">
-                        <div class="stat-number" data-count="100000">0</div>
-                        <div class="stat-label">network packets generated for covert channel detection</div>
-                    </div>
-                    <div class="stat-item fade-in">
-                        <div class="stat-number" data-count="3">0</div>
-                        <div class="stat-label">majors, 3 minors, and a 3.5+ GPA in a CAE-CD program</div>
-                    </div>
-                    <div class="stat-item fade-in">
-                        <div class="stat-number" data-count="1000">0</div>
-                        <div class="stat-label">plays on youth podcast founded with grant support</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+         <!-- Vision Section -->
         <section class="section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title">Why Choose a Student-Led Company?</h2>
-                    <p class="section-subtitle">My status as a student isn't a limitation — it's a strategic advantage.</p>
-                </div>
-
-                <div class="advantages-grid">
-                    <div class="advantage-card fade-in">
-                        <div class="advantage-icon">🧠</div>
-                        <h3>Fresh Perspective</h3>
-                        <p>Not bound by "the way things have always been done" — I approach problems with curiosity and innovation.</p>
+                <div class="vision-section fade-in">
+                    <div class="section-header">
+                        <div class="section-badge vision-glow">Our Vision</div>
+                        <h2 class="section-title interactive-heading">Security for <span class="accent-hover">All</span></h2>
                     </div>
-                    <div class="advantage-card fade-in">
-                        <div class="advantage-icon">⚡</div>
-                        <h3>Adaptable & Fast</h3>
-                        <p>Still learning means I'm adaptable, humble, and quick to incorporate new knowledge and techniques.</p>
-                    </div>
-                    <div class="advantage-card fade-in">
-                        <div class="advantage-icon">🔬</div>
-                        <h3>Research-First</h3>
-                        <p>Grounded in current academic research and cutting-edge developments in the field.</p>
-                    </div>
-                    <div class="advantage-card fade-in">
-                        <div class="advantage-icon">🌐</div>
-                        <h3>Diverse Background</h3>
-                        <p>Intersecting expertise in cybersecurity, math, anthropology, and AI provides unique insights.</p>
+                    
+                    <div class="vision-content">
+                        <p class="vision-statement hover-lift">Empowering people and organizations to <span class="warning-text">defend</span> what matters <span class="warning-text">most</span> in an increasingly <span class="warning-text">connected</span> world.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Goshen Story Section -->
         <section class="section section-alt">
             <div class="container">
-                <div class="contact-card fade-in">
-                    <h2>Ready to Work with the Next Generation?</h2>
-                    <p>Let's discuss how fresh perspective and proven expertise can secure your organization.</p>
-                    <a href="contact.html" class="btn-primary">
-                        Get Started Today
+                <div class="goshen-story fade-in">
+                    <div class="story-header">
+                        <div class="story-icon">🏛️</div>
+                        <div>
+                            <h2 class="story-title interactive-heading">Goshen: A Place of <span class="highlight-text">Safety</span></h2>
+                            <p class="story-subtitle">The meaning behind our name</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-content">
+                        <div class="biblical-reference">
+                            <p class="hover-lift">In the Biblical account of The Exodus, God provided the land of <span class="accent-hover">Goshen</span> for the Jewish people; a land free of famine, plagues, and turmoil–a place of flourishing and prosperity. <span class="text-reference">(Exodus 1, 8)</span></p>
+                        </div>
+                        
+                        <div class="modern-application">
+                            <p class="hover-lift">At Goshen Digital Security, we bring <span class="accent-hover">order to digital chaos</span>. We protect against cyber crime and build foundations for cyber safety.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="values-section fade-in">
+                    <div class="section-header">
+                        <div class="section-badge values-glow">Our Values</div>
+                        <h2 class="section-title interactive-heading">What Drives <span class="accent-hover">Us</span></h2>
+                    </div>
+                    
+                    <div class="values-grid">
+                        <div class="value-card enhanced-card-hover">
+                            <div class="value-icon">🛡️</div>
+                            <h3>Safety</h3>
+                            <p>Creating secure digital environments where organizations can thrive without fear.</p>
+                        </div>
+                        
+                        <div class="value-card enhanced-card-hover">
+                            <div class="value-icon">🔒</div>
+                            <h3>Security</h3>
+                            <p>Implementing robust protections that scale from individuals to enterprises.</p>
+                        </div>
+                        
+                        <div class="value-card enhanced-card-hover">
+                            <div class="value-icon">🤝</div>
+                            <h3>Service</h3>
+                            <p>Putting clients first with personalized, human-centered cybersecurity solutions.</p>
+                        </div>
+                        
+                        <div class="value-card enhanced-card-hover">
+                            <div class="value-icon">💎</div>
+                            <h3>Integrity</h3>
+                            <p>Honest assessments, transparent practices, and ethical security recommendations.</p>
+                        </div>
+                        
+                        <div class="value-card enhanced-card-hover">
+                            <div class="value-icon">🌐</div>
+                            <h3>Open Source</h3>
+                            <p>Championing FOSS solutions that democratize access to enterprise-grade security.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOSS Philosophy Section -->
+        <section class="section foss-section">
+            <div class="container">
+                <div class="philosophy-section fade-in">
+                    <div class="philosophy-header">
+                        <div class="philosophy-icon">💡</div>
+                        <div>
+                            <h2 class="philosophy-title interactive-heading">Our Security Philosophy: <span class="highlight-text">FOSS</span></h2>
+                            <p class="philosophy-subtitle">Free & Open Source Software</p>
+                        </div>
+                    </div>
+                    
+                    <div class="philosophy-content">
+                        <div class="foss-principle">
+                            <p class="hover-lift"><span class="warning-text">Subscriptions & fees shouldn't be a barrier to Cybersecurity.</span> That's why we strive to recommend and implement security tools that are <span class="accent-hover">Free & Open Source Software (FOSS)</span>.</p>
+                        </div>
+                        
+                        <div class="privacy-principle">
+                            <p class="hover-lift">Additionally, we help our clients choose security solutions that <span class="accent-hover">preserve the privacy</span> of their employees and organization.</p>
+                        </div>
+                        
+                        <div class="foss-benefits">
+                            <h3 class="benefits-title">Why FOSS Matters</h3>
+                            <div class="benefits-grid">
+                                <div class="benefit-item enhanced-card-hover">
+                                    <div class="benefit-icon">💰</div>
+                                    <h4>Cost Effective</h4>
+                                    <p>No licensing fees or subscription barriers to essential security tools.</p>
+                                </div>
+                                
+                                <div class="benefit-item enhanced-card-hover">
+                                    <div class="benefit-icon">🔍</div>
+                                    <h4>Transparent</h4>
+                                    <p>Open source code means no hidden backdoors or surveillance features.</p>
+                                </div>
+                                
+                                <div class="benefit-item enhanced-card-hover">
+                                    <div class="benefit-icon">🔧</div>
+                                    <h4>Customizable</h4>
+                                    <p>Adapt and modify tools to fit your specific security requirements.</p>
+                                </div>
+                                
+                                <div class="benefit-item enhanced-card-hover">
+                                    <div class="benefit-icon">🌍</div>
+                                    <h4>Community Driven</h4>
+                                    <p>Benefit from global community contributions and rapid security updates.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="contact-card fade-in cta-card-enhanced">
+                    <h2 class="interactive-heading">Ready to Secure Your Digital Goshen?</h2>
+                    <p class="hover-lift">Let's build a foundation of <span class="accent-hover">safety and security</span> for your organization.</p>
+                    <a href="contact.html" class="btn-primary pulse-button cta-main">
+                        Start Your Security Journey
                         <span>→</span>
                     </a>
                 </div>
@@ -172,10 +217,10 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Goshen Digital Security. Cybersecurity for the underserved. Protection for those who can't afford to lose.</p>
+            <p>&copy; 2025 Goshen Digital Security. <span class="accent-hover">Cybersecurity for the underserved</span>. <span class="accent-hover">Protection for those who can't afford to lose</span>.</p>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="about.js"></script>
 </body>
 </html>

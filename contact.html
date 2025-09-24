@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Goshen Digital Security</title>
-    <meta name="description" content="Get in touch with Goshen Digital Security for cybersecurity consultation and services.">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="Get in touch with Goshen Digital Security. Schedule a consultation or reach out for cybersecurity assistance.">
+    <link rel="stylesheet" href="contact.css">
+    <script type="text/javascript" async src="https://static.zcal.co/embed/v1/embed.js"></script>
 </head>
 <body>
     <header>
@@ -14,232 +15,241 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="assessment.html">Assessment</a></li>
+                <!-- <li><a href="assessment.html">Assessment</a></li> -->
                 <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <!-- <li><a href="blog.html">Blog</a></li> -->
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
             <div class="nav-right">
                 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
 
     <main class="page-content">
         <section class="section hero-alt">
+            <div class="grid-bg"></div>
             <div class="container">
                 <div class="section-header fade-in">
-                    <div class="section-badge">CONTACT</div>
-                    <h1 class="section-title">Let's Secure Your Future</h1>
-                    <p class="section-subtitle">Ready to elevate your cybersecurity posture? Let's discuss your security needs and build a protection plan that works for you.</p>
+                    <div class="section-badge contact-glow">Get In Touch</div>
+                    <h1 class="section-title">Let's Secure Your <span class="highlight-text">Digital Future</span></h1>
+                    <p class="section-subtitle hover-highlight">Ready to protect what matters most? <span class="accent-hover">Schedule a consultation</span> or <span class="accent-hover">reach out directly</span>.</p>
                 </div>
             </div>
         </section>
-
+         <!-- Contact Methods Section -->
         <section class="section">
             <div class="container">
-                <div class="contact-layout">
-                    <div class="contact-form-container fade-in">
-                        <h2>Get Started Today</h2>
-                        <p>Fill out the form below and we'll get back to you within 24 hours with a personalized security consultation.</p>
-                        
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="first-name">First Name</label>
-                                    <input type="text" id="first-name" name="firstName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="last-name">Last Name</label>
-                                    <input type="text" id="last-name" name="lastName" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="organization">Organization/Company</label>
-                                <input type="text" id="organization" name="organization">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="organization-type">Organization Type</label>
-                                <select id="organization-type" name="organizationType">
-                                    <option value="">Select type...</option>
-                                    <option value="solopreneur">Solopreneur/Freelancer</option>
-                                    <option value="small-business">Small Business (2-10 employees)</option>
-                                    <option value="nonprofit">Nonprofit Organization</option>
-                                    <option value="startup">Startup</option>
-                                    <option value="medium-business">Medium Business (11-50 employees)</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="services-interested">Services You're Interested In</label>
-                                <div class="checkbox-group">
-                                    <label><input type="checkbox" name="services" value="security-training"> Security Training & Awareness</label>
-                                    <label><input type="checkbox" name="services" value="social-media"> Social Media Security</label>
-                                    <label><input type="checkbox" name="services" value="solopreneur"> Solopreneur Protection</label>
-                                    <label><input type="checkbox" name="services" value="assessment"> Security Risk Assessment</label>
-                                    <label><input type="checkbox" name="services" value="consultation"> One-time Consultation</label>
-                                    <label><input type="checkbox" name="services" value="ongoing"> Ongoing Security Support</label>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="budget">Approximate Monthly Budget</label>
-                                <select id="budget" name="budget">
-                                    <option value="">Select range...</option>
-                                    <option value="under-300">Under $300</option>
-                                    <option value="300-600">$300 - $600</option>
-                                    <option value="600-1200">$600 - $1,200</option>
-                                    <option value="1200-2500">$1,200 - $2,500</option>
-                                    <option value="over-2500">Over $2,500</option>
-                                    <option value="discuss">Prefer to discuss</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="security-concerns">Current Security Concerns</label>
-                                <textarea id="security-concerns" name="concerns" rows="4" placeholder="Tell us about your current security challenges, recent incidents, or specific concerns..."></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="timeline">When would you like to get started?</label>
-                                <select id="timeline" name="timeline">
-                                    <option value="">Select timeline...</option>
-                                    <option value="immediately">Immediately</option>
-                                    <option value="within-week">Within a week</option>
-                                    <option value="within-month">Within a month</option>
-                                    <option value="within-quarter">Within 3 months</option>
-                                    <option value="just-exploring">Just exploring options</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="how-found">How did you find us?</label>
-                                <select id="how-found" name="howFound">
-                                    <option value="">Select...</option>
-                                    <option value="search">Search Engine</option>
-                                    <option value="referral">Referral from someone</option>
-                                    <option value="social-media">Social Media</option>
-                                    <option value="article">Article or Blog</option>
-                                    <option value="conference">Conference or Event</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="additional-info">Additional Information</label>
-                                <textarea id="additional-info" name="additionalInfo" rows="3" placeholder="Any additional details you'd like to share?"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn-primary form-submit">
-                                Send Message
-                                <span>→</span>
-                            </button>
-                        </form>
+                <div class="contact-methods-section fade-in">
+                    <div class="section-header">
+                        <h2 class="section-title interactive-heading">Connect With <span class="accent-hover">Us</span></h2>
+                        <p class="section-subtitle hover-highlight">Choose the method that works best for you</p>
                     </div>
-                    
-                    <div class="contact-info-container fade-in">
-                        <div class="contact-info-card">
-                            <h3>Get in Touch</h3>
-                            <p>We respond to all inquiries within 24 hours. For urgent security issues, please call directly.</p>
-                            
-                            <div class="contact-methods">
-                                <div class="contact-method">
-                                    <div class="contact-icon">📧</div>
-                                    <div>
-                                        <h4>Email</h4>
-                                        <p>info@goshendigitalsecurity.com</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="contact-method">
-                                    <div class="contact-icon">📞</div>
-                                    <div>
-                                        <h4>Phone</h4>
-                                        <p>(555) 123-SECURE</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="contact-method">
-                                    <div class="contact-icon">🌐</div>
-                                    <div>
-                                        <h4>Service Areas</h4>
-                                        <p>Remote & On-site Services Available</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="contact-method">
-                                    <div class="contact-icon">⏰</div>
-                                    <div>
-                                        <h4>Response Time</h4>
-                                        <p>24 hours for consultations<br>
-                                        2 hours for security emergencies</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="consultation-card">
-                            <h3>Free Security Consultation</h3>
-                            <p>Not sure where to start? Book a free 30-minute consultation to discuss your security needs.</p>
-                            <a href="#" class="btn-secondary consultation-btn">
-                                Schedule Free Call
-                                <span>📅</span>
+
+                    <div class="contact-methods-grid">
+                        <div class="contact-method-card enhanced-card-hover">
+                            <div class="contact-icon email-icon">📧</div>
+                            <h3>Email</h3>
+                            <p>For general inquiries and detailed discussions</p>
+                            <a href="mailto:info@goshendigitalsecurity.com" class="contact-link hover-glow">
+                                info@goshendigitalsecurity.com
                             </a>
                         </div>
-                        
-                        <div class="emergency-card">
-                            <h3>Security Emergency?</h3>
-                            <p>If you're experiencing an active security incident, please call immediately:</p>
-                            <a href="tel:5551235673" class="emergency-number">(555) 123-SECURE</a>
-                            <p class="emergency-note">Available 24/7 for existing clients</p>
+
+                        <div class="contact-method-card enhanced-card-hover">
+                            <div class="contact-icon phone-icon">📞</div>
+                            <h3>Phone</h3>
+                            <p>Direct Line Available 9am-5pm MST</p>
+                            <a href="tel:+17206042455" class="contact-link hover-glow">
+                                +1 (720) 604-2455
+                            </a>
+                        </div>
+
+                        <div class="contact-method-card enhanced-card-hover">
+                            <div class="contact-icon github-icon">🔗</div>
+                            <h3>GitHub</h3>
+                            <p>Explore our open source contributions</p>
+                            <a href="https://github.com/Goshen-Digital-Security" target="_blank" rel="noopener noreferrer" class="contact-link hover-glow">
+                                github.com/Goshen-Digital-Security
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Scheduling Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="scheduling-section fade-in">
+                    <div class="section-header">
+                        <div class="section-badge schedule-glow">Schedule a Meeting</div>
+                        <h2 class="section-title interactive-heading">Book Your Free <span class="highlight-text">Consultation</span></h2>
+                        <p class="section-subtitle hover-highlight">30 minutes to discuss your <span class="accent-hover">security needs</span> and explore how we can help</p>
+                    </div>
+
+                    <div class="booking-container">
+                        <div class="booking-info">
+                            <div class="info-card enhanced-card-hover">
+                                <div class="info-icon">⏰</div>
+                                <h4>What to Expect</h4>
+                                <ul class="info-list">
+                                    <li class="info-item hover-lift">Security posture assessment</li>
+                                    <li class="info-item hover-lift">Tailored recommendations</li>
+                                    <li class="info-item hover-lift">Service discussion</li>
+                                    <li class="info-item hover-lift">Next steps planning</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="booking-widget">
+                            <div class="widget-container">
+                                <div class="zcal-inline-widget">
+                                    <a href="https://zcal.co/i/NChcRyPp">30 Minute Meeting - Schedule a meeting</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+        
+
+        <!-- Response Times Section -->
+        <section class="section">
+            <div class="container">
+                <div class="response-section fade-in">
+                    <div class="section-header">
+                        <div class="section-badge response-glow">Response Times</div>
+                        <h2 class="section-title interactive-heading">When You'll <span class="accent-hover">Hear Back</span></h2>
+                    </div>
+
+                    <div class="response-grid">
+                        <div class="response-card enhanced-card-hover">
+                            <div class="response-icon urgent-icon">🚨</div>
+                            <h3>Urgent Security Issues</h3>
+                            <div class="response-time danger-glow-text">Within 24 Hours</div>
+                            <p>Active breaches, suspected attacks, or critical vulnerabilities</p>
+                        </div>
+
+                        <div class="response-card enhanced-card-hover">
+                            <div class="response-icon business-icon">💼</div>
+                            <h3>Business Inquiries</h3>
+                            <div class="response-time accent-glow-text">Same Business Day</div>
+                            <p>Service questions, consultations, and project discussions</p>
+                        </div>
+
+                        <div class="response-card enhanced-card-hover">
+                            <div class="response-icon general-icon">📝</div>
+                            <h3>General Questions</h3>
+                            <div class="response-time success-glow-text">Within 2 Business Days</div>
+                            <p>Information requests and general cybersecurity inquiries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Areas Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="service-areas-section fade-in">
+                    <div class="section-header">
+                        <div class="section-badge areas-glow">Service Areas</div>
+                        <h2 class="section-title interactive-heading">We Serve <span class="highlight-text">Everywhere</span></h2>
+                        <p class="section-subtitle hover-highlight">Remote consultations and on-site services available</p>
+                    </div>
+
+                    <div class="areas-grid">
+                        <div class="area-card enhanced-card-hover">
+                            <div class="area-icon">🌐</div>
+                            <h3>Remote Services</h3>
+                            <p class="hover-lift">Comprehensive cybersecurity consulting available <span class="accent-hover">worldwide</span> through secure remote connections</p>
+                        </div>
+
+                        <div class="area-card enhanced-card-hover">
+                            <div class="area-icon">📍</div>
+                            <h3>Local On-Site</h3>
+                            <p class="hover-lift">In-person consultations and implementations available in the <span class="accent-hover">Denver, Colorado area</span></p>
+                        </div>
+
+                        <div class="area-card enhanced-card-hover">
+                            <div class="area-icon">✈️</div>
+                            <h3>Travel Available</h3>
+                            <p class="hover-lift">Extended on-site engagements available for <span class="accent-hover">enterprise clients</span> nationwide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact Section -->
+        <!-- <section class="section emergency-section">
+            <div class="container">
+                <div class="emergency-banner fade-in">
+                    <div class="emergency-content">
+                        <div class="emergency-icon-large">🚨</div>
+                        <div class="emergency-text">
+                            <h2 class="emergency-title">Security Emergency?</h2>
+                            <p class="emergency-subtitle">If you're experiencing an active cyberattack or security breach</p>
+                            <div class="emergency-actions">
+                                <a href="tel:+17206042455" class="emergency-phone pulse-button">
+                                    Call Now: (720) 604-2455
+                                </a>
+                                <span class="emergency-note">Available 24/7 for security emergencies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- FAQ Section -->
         <section class="section section-alt">
             <div class="container">
                 <div class="faq-section fade-in">
-                    <h2>Frequently Asked Questions</h2>
-                    
+                    <div class="section-header">
+                        <div class="section-badge faq-glow">FAQ</div>
+                        <h2 class="section-title interactive-heading">Common <span class="accent-hover">Questions</span></h2>
+                    </div>
+
                     <div class="faq-grid">
-                        <div class="faq-item">
-                            <h4>How quickly can you start helping us?</h4>
-                            <p>For consultations and assessments, we can typically start within 48-72 hours. For ongoing services, we can usually begin within a week of our initial consultation.</p>
+                        <div class="faq-item enhanced-card-hover">
+                            <h4>How much do your services cost?</h4>
+                            <p class="hover-lift">We offer <span class="accent-hover">transparent pricing</span> tailored to your needs. Contact us for a custom quote based on your specific requirements.</p>
                         </div>
-                        
-                        <div class="faq-item">
-                            <h4>Do you work with organizations outside the US?</h4>
-                            <p>Yes, we provide remote cybersecurity services to organizations worldwide. Our assessment and training programs are designed to work across different jurisdictions.</p>
+
+                        <div class="faq-item enhanced-card-hover">
+                            <h4>Do you work with small businesses?</h4>
+                            <p class="hover-lift">Absolutely! We specialize in cybersecurity for <span class="accent-hover">small teams</span>, <span class="accent-hover">nonprofits</span>, and <span class="accent-hover">solopreneurs</span>.</p>
                         </div>
-                        
-                        <div class="faq-item">
-                            <h4>What if I'm not sure what services I need?</h4>
-                            <p>That's exactly why we offer free consultations. We'll discuss your current situation, identify risks, and recommend the most appropriate services for your needs and budget.</p>
+
+                        <div class="faq-item enhanced-card-hover">
+                            <h4>What's included in a consultation?</h4>
+                            <p class="hover-lift">A comprehensive review of your current security posture, <span class="accent-hover">personalized recommendations</span>, and a clear action plan.</p>
                         </div>
-                        
-                        <div class="faq-item">
-                            <h4>Can you help with compliance requirements?</h4>
-                            <p>Yes, we help organizations understand and implement security measures to meet various compliance requirements including GDPR, HIPAA, and industry-specific regulations.</p>
+
+                        <div class="faq-item enhanced-card-hover">
+                            <h4>Do you offer ongoing support?</h4>
+                            <p class="hover-lift">Yes! We provide <span class="accent-hover">continuous monitoring</span>, regular assessments, and ongoing security guidance.</p>
                         </div>
-                        
-                        <div class="faq-item">
-                            <h4>Do you offer payment plans?</h4>
-                            <p>Yes, we understand that cash flow is important for small organizations. We offer flexible payment options including monthly plans and project-based pricing.</p>
+
+                        <div class="faq-item enhanced-card-hover">
+                            <h4>Can you help with compliance?</h4>
+                            <p class="hover-lift">We assist with various compliance frameworks and help ensure your organization meets <span class="accent-hover">security standards</span>.</p>
                         </div>
-                        
-                        <div class="faq-item">
-                            <h4>What makes you different from other cybersecurity firms?</h4>
-                            <p>We specialize in serving underserved organizations - small businesses, nonprofits, and solopreneurs. Our approach is human-first, practical, and designed for teams without dedicated IT staff.</p>
+
+                        <div class="faq-item enhanced-card-hover">
+                            <h4>What if I'm not tech-savvy?</h4>
+                            <p class="hover-lift">That's exactly who we serve! We make cybersecurity <span class="accent-hover">simple and accessible</span> for everyone.</p>
                         </div>
                     </div>
                 </div>
@@ -249,10 +259,10 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Goshen Digital Security. Cybersecurity for the underserved. Protection for those who can't afford to lose.</p>
+            <p>&copy; 2025 Goshen Digital Security. <span class="accent-hover">Cybersecurity for the underserved</span>. <span class="accent-hover">Protection for those who can't afford to lose</span>.</p>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="contact.js"></script>
 </body>
 </html>
