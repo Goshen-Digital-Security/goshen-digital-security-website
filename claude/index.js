@@ -90,19 +90,30 @@ function initializeScrollEffects() {
 
     // Header scroll effect
     let lastScrollY = window.scrollY;
+    // window.addEventListener('scroll', () => {
+    //     const header = document.querySelector('header');
+    //     const currentScrollY = window.scrollY;
+        
+    //     if (currentScrollY > 100) {
+    //         header.style.background = 'rgba(10, 10, 11, 0.95)';
+    //         header.style.backdropFilter = 'blur(20px)';
+    //     } else {
+    //         header.style.background = 'rgba(10, 10, 11, 0.85)';
+    //         header.style.backdropFilter = 'blur(12px)';
+    //     }
+        
+    //     lastScrollY = currentScrollY;
+    // }, { passive: true });
+
     window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        const currentScrollY = window.scrollY;
-        
-        if (currentScrollY > 100) {
-            header.style.background = 'rgba(10, 10, 11, 0.95)';
-            header.style.backdropFilter = 'blur(20px)';
-        } else {
-            header.style.background = 'rgba(10, 10, 11, 0.85)';
-            header.style.backdropFilter = 'blur(12px)';
-        }
-        
-        lastScrollY = currentScrollY;
+    const header = document.querySelector('header');
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
     }, { passive: true });
 }
 

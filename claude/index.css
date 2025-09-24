@@ -80,6 +80,12 @@ header {
     transition: all 0.3s ease;
 }
 
+header.scrolled {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(20px) !important;
+    opacity: 0.98;
+}
+
 nav {
     display: flex;
     align-items: center;
