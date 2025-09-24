@@ -26,8 +26,8 @@
     --shadow-color: rgba(0, 0, 0, 0.3);
     
     /* Tighter, more readable font sizes */
-    --subtext-font-size: 16px;
-    --subtitle-font-size: 18px;
+    --subtext-font-size: 18px;
+    --subtitle-font-size: 20px;
     --section-spacing: 60px;
 }
 

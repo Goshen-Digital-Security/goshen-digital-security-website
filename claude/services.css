@@ -28,8 +28,8 @@
     
     /* Spacing variables */
     --section-spacing: 60px;
-    --subtext-font-size: 16px;
-    --subtitle-font-size: 18px;
+    --subtext-font-size: 18px;
+    --subtitle-font-size: 20px;
 }
 
 [data-theme="light"] {
@@ -453,7 +453,7 @@ nav {
 }
 
 .service-description {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
 }
 
@@ -508,7 +508,7 @@ nav {
 }
 
 .offering-item h4 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 8px;
     color: var(--text-primary);
@@ -516,7 +516,7 @@ nav {
 
 .offering-item p {
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -583,7 +583,7 @@ nav {
 }
 
 .category-subtitle {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-secondary);
 }
 
@@ -752,7 +752,7 @@ nav {
 }
 
 .package-tagline {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--accent-primary);
     font-weight: 500;
 }
@@ -763,7 +763,7 @@ nav {
 
 .package-description p {
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.6;
 }
 
@@ -778,7 +778,7 @@ nav {
     color: var(--text-secondary);
     position: relative;
     padding-left: 20px;
-    font-size: 14px;
+    font-size: 16px;
     transition: all 0.3s ease;
 }
 
@@ -909,7 +909,7 @@ nav {
 .contact-card p {
     color: var(--text-secondary);
     margin-bottom: 24px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .cta-main {

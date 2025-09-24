@@ -26,7 +26,7 @@
     --shadow-color: rgba(0, 0, 0, 0.3);
     
     /* Font sizes and spacing */
-    --subtext-font-size: 16px;
+    --subtext-font-size: 18px;
     --subtitle-font-size: 18px;
     --section-spacing: 60px;
 }
@@ -77,6 +77,12 @@ header {
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     transition: all 0.3s ease;
+}
+
+header.scrolled {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(20px) !important;
+    opacity: 0.98;
 }
 /* 
 nav {
@@ -344,7 +350,7 @@ nav {
     display: inline-block;
     padding: 4px 12px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 12px;
     border: 1px solid;
@@ -362,6 +368,7 @@ nav {
     color: var(--accent-primary);
     border-color: rgba(0, 208, 132, 0.2);
 }
+
 
 .vision-glow {
     background: rgba(245, 158, 11, 0.1);
@@ -386,7 +393,7 @@ nav {
 }
 
 .section-subtitle {
-    font-size: var(--subtitle-font-size);
+    font-size: 18px;
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
@@ -426,7 +433,7 @@ nav {
     background: linear-gradient(90deg, transparent, rgba(0, 208, 132, 0.1), transparent);
     border-radius: 4px;
     padding: 2px 4px;
-    margin: -2px -4px;
+    /* margin: -2px -4px; */
 }
 
 .hover-lift {
@@ -472,10 +479,21 @@ nav {
 }
 
 .mission-text p {
-    font-size: var(--subtext-font-size);
+    font-size: 20px;
     color: var(--text-secondary);
     margin-bottom: 24px;
     line-height: 1.6;
+}
+
+.warning-text {
+    color: var(--accent-warning);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.warning-text:hover {
+    color: #fbbf24;
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
 }
 
 /* Goshen Story Section */
@@ -645,7 +663,7 @@ nav {
 
 .value-card p {
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -695,7 +713,7 @@ nav {
 }
 
 .philosophy-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--accent-tertiary);
     font-weight: 600;
     text-align: center;
@@ -770,7 +788,7 @@ nav {
 }
 
 .benefit-item h4 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 8px;
     color: var(--text-primary);
@@ -778,7 +796,7 @@ nav {
 
 .benefit-item p {
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
 }
 
