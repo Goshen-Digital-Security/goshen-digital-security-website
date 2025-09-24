@@ -166,21 +166,61 @@ function initializeEmergencyBanner() {
     }
 }
 
+// function initializeBookingWidget() {
+//     const bookingContainer = document.querySelector('.booking-container');
+//     if (bookingContainer) {
+//         // Monitor for booking widget load
+//         const checkWidget = setInterval(() => {
+//             const widget = document.querySelector('.zcal-inline-widget iframe');
+//             if (widget) {
+//                 console.log('Booking widget loaded');
+//                 clearInterval(checkWidget);
+                
+//                 // Add loading state management
+//                 const widgetContainer = document.querySelector('.widget-container');
+//                 widgetContainer.classList.add('widget-loaded');
+//             }
+//         }, 1000);
+        
+//         // Add info card interactions
+//         document.querySelectorAll('.info-item').forEach(item => {
+//             item.addEventListener('mouseenter', function() {
+//                 this.style.transform = 'translateX(8px)';
+//                 this.style.color = 'var(--accent-primary)';
+//             });
+            
+//             item.addEventListener('mouseleave', function() {
+//                 this.style.transform = '';
+//                 this.style.color = '';
+//             });
+//         });
+//     }
+// }
+
 function initializeBookingWidget() {
     const bookingContainer = document.querySelector('.booking-container');
     if (bookingContainer) {
+        let widgetLoaded = false;
+        
         // Monitor for booking widget load
         const checkWidget = setInterval(() => {
             const widget = document.querySelector('.zcal-inline-widget iframe');
             if (widget) {
                 console.log('Booking widget loaded');
+                widgetLoaded = true;
                 clearInterval(checkWidget);
                 
-                // Add loading state management
                 const widgetContainer = document.querySelector('.widget-container');
                 widgetContainer.classList.add('widget-loaded');
             }
         }, 1000);
+        
+        // Show fallback after 10 seconds if widget hasn't loaded
+        setTimeout(() => {
+            if (!widgetLoaded) {
+                showBookingFallback();
+            }
+        }, 10000);
         
         // Add info card interactions
         document.querySelectorAll('.info-item').forEach(item => {
@@ -526,6 +566,27 @@ function checkIntersectionObserverSupport() {
         document.querySelectorAll('.fade-in').forEach(el => {
             el.classList.add('visible');
         });
+    }
+}
+
+
+
+
+function showBookingFallback() {
+    const widgetContainer = document.querySelector('.widget-container');
+    if (widgetContainer) {
+        widgetContainer.innerHTML = `
+            <div class="booking-fallback">
+                <div class="fallback-icon">📅</div>
+                <h3>Having trouble with the booking widget?</h3>
+                <p>Click the button below to book your consultation directly</p>
+                <a href="https://zcal.co/goshen/30min" target="_blank" rel="noopener noreferrer" class="btn-primary pulse-button">
+                    Book 30-Minute Consultation
+                    <span>→</span>
+                </a>
+                <p class="fallback-note">Opens in a new window</p>
+            </div>
+        `;
     }
 }
 
