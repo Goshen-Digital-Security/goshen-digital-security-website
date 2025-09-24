@@ -347,7 +347,7 @@ nav {
     display: inline-block;
     padding: 4px 12px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 12px;
     border: 1px solid;
@@ -539,7 +539,7 @@ nav {
 .contact-method-card p {
     color: var(--text-secondary);
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .contact-link {
@@ -908,7 +908,7 @@ nav {
 }
 
 .faq-item h4 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 12px;
     color: var(--text-primary);
@@ -922,7 +922,7 @@ nav {
 .faq-item p {
     color: var(--text-secondary);
     line-height: 1.6;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* Footer */
