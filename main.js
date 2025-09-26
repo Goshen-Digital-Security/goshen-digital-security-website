@@ -146,6 +146,49 @@ function initializeCounters() {
     // This is triggered by the intersection observer in initializeScrollEffects()
 }
 
+// function animateCounter(element) {
+//     // 1. Read all the data attributes, including the new prefix and suffix
+//     const target = parseFloat(element.getAttribute('data-count'));
+//     const prefix = element.getAttribute('data-prefix') || ''; // Default to empty string
+//     const suffix = element.getAttribute('data-suffix') || ''; // Default to empty string
+    
+//     const duration = 2000; // Animation duration in milliseconds
+//     const startTime = performance.now();
+    
+//     // Mark as counted to prevent re-animating on scroll
+//     element.classList.add('counted');
+    
+//     function updateCounter(currentTime) {
+//         const elapsed = currentTime - startTime;
+//         const progress = Math.min(elapsed / duration, 1);
+//         const currentVal = target * progress;
+
+//         let displayedVal;
+
+//         // 2. Intelligently format the number based on whether the target is a decimal
+//         if (target % 1 !== 0) {
+//             // If the target is a decimal (like 4.45), use toFixed(2)
+//             displayedVal = currentVal.toFixed(2);
+//         } else {
+//             // If the target is an integer (like 43), use Math.floor()
+//             displayedVal = Math.floor(currentVal);
+//         }
+
+//         // 3. Combine the prefix, number, and suffix
+//         element.textContent = `${prefix}${displayedVal}${suffix}`;
+
+//         if (progress < 1) {
+//             requestAnimationFrame(updateCounter);
+//         } else {
+//             // 4. Ensure the final displayed value is exact and correctly formatted
+//             const finalVal = (target % 1 !== 0) ? target.toFixed(2) : target;
+//             element.textContent = `${prefix}${finalVal}${suffix}`;
+//         }
+//     }
+    
+//     requestAnimationFrame(updateCounter);
+// }
+
 function animateCounter(element) {
     // 1. Read all the data attributes, including the new prefix and suffix
     const target = parseFloat(element.getAttribute('data-count'));
@@ -165,13 +208,13 @@ function animateCounter(element) {
 
         let displayedVal;
 
-        // 2. Intelligently format the number based on whether the target is a decimal
+        // 2. Intelligently format the number
         if (target % 1 !== 0) {
-            // If the target is a decimal (like 4.45), use toFixed(2)
+            // This handles decimals, which don't need commas.
             displayedVal = currentVal.toFixed(2);
         } else {
-            // If the target is an integer (like 43), use Math.floor()
-            displayedVal = Math.floor(currentVal);
+            // MODIFICATION: Format the whole number with commas.
+            displayedVal = Math.floor(currentVal).toLocaleString();
         }
 
         // 3. Combine the prefix, number, and suffix
@@ -180,8 +223,9 @@ function animateCounter(element) {
         if (progress < 1) {
             requestAnimationFrame(updateCounter);
         } else {
-            // 4. Ensure the final displayed value is exact and correctly formatted
-            const finalVal = (target % 1 !== 0) ? target.toFixed(2) : target;
+            // 4. Ensure the final displayed value is exact and correctly formatted.
+            // MODIFICATION: Ensure the final value is also formatted with commas.
+            const finalVal = (target % 1 !== 0) ? target.toFixed(2) : target.toLocaleString();
             element.textContent = `${prefix}${finalVal}${suffix}`;
         }
     }
