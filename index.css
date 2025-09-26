@@ -284,7 +284,7 @@ nav {
     transform: scale(1.05);
 }
 
-.interactive-title {
+/* .interactive-title {
     background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -298,6 +298,32 @@ nav {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     transform: translateY(-2px);
+} */
+
+/* Ensure text is always visible - no JavaScript dependency */
+.interactive-title {
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Remove any transitions that might hide text initially */
+.fade-in {
+    opacity: 1; /* Show by default */
+    transform: translateY(0); /* No initial transform */
+}
+
+/* Only apply fade effect after JavaScript loads */
+.js-loaded .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.js-loaded .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .highlight-text {
@@ -808,7 +834,7 @@ nav {
 
 .stat-label {
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
 }
 
