@@ -1064,3 +1064,21 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+.contact-link {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 24px;
+    border: 1px solid rgba(0, 208, 132, 0.3);
+    border-radius: 8px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.hover-glow:hover {
+    background: rgba(0, 208, 132, 0.1);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 20px rgba(0, 208, 132, 0.3);
+}
