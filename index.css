@@ -508,9 +508,9 @@ nav {
     transition: all 0.3s ease;
 }
 
-.danger-glow:hover {
+/* .danger-glow:hover {
     text-shadow: 0 0 25px rgba(239, 68, 68, 0.6);
-}
+} */
 
 .danger-glow-text {
     color: var(--accent-danger);
@@ -518,9 +518,9 @@ nav {
     transition: all 0.3s ease;
 }
 
-.danger-glow-text:hover {
+/* .danger-glow-text:hover {
     text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
-}
+} */
 
 .warning-text {
     color: var(--accent-warning);
@@ -528,10 +528,10 @@ nav {
     transition: all 0.3s ease;
 }
 
-.warning-text:hover {
+/* .warning-text:hover {
     color: #fbbf24;
     text-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
-}
+} */
 
 .warning-glow-text {
     color: var(--accent-warning);
